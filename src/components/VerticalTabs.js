@@ -5,6 +5,12 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
+import { BrowserRouter as Router, Route, Routes, useHistory } from 'react-router-dom'; // Import necessary components
+import ProjectGallery from './ProjectGallery';
+import ProjectDetails from '../data/projectData.js';
+import About from './About'; // Import About component
+
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -48,7 +54,7 @@ export default function VerticalTabs() {
   return (
     <Box
       sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', 
-      height: '100vh'}}
+      minHeight: '100vh'}}
     >
       <Tabs
         orientation="vertical"
@@ -56,7 +62,9 @@ export default function VerticalTabs() {
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs example"
-        sx={{ borderRight: 1, borderColor: 'divider', width: '25%'}}
+        sx={{ borderRight: 1, borderColor: 'divider',
+          minWidth: '25%', maxWidth: '25%'
+        }}
       >
 
         <Tab label="About" {...a11yProps(0)} 
@@ -76,12 +84,13 @@ export default function VerticalTabs() {
         <Tab label="Work" {...a11yProps(7)}
         sx = {{position: 'relative', top: '10vh'}} />
         <Tab label="Resume" {...a11yProps(8)} 
-        sx={{position: 'relative', top: '30vh'}}/>
+        sx={{position: 'relative', bottom: '-30vh'}}/>
         <Tab label="Contact" {...a11yProps(9)} 
-        sx={{position: 'relative', top: '30vh'}}/>
+        sx={{position: 'relative', bottom: '-30vh'}}/>
       </Tabs>
+
       <TabPanel value={value} index={0}>
-        Item One
+        <About />
       </TabPanel>
       <TabPanel value={value} index={1}>
         Item Two
@@ -110,6 +119,7 @@ export default function VerticalTabs() {
       <TabPanel value={value} index={9}>
         Item Seven
       </TabPanel>
+      
     </Box>
   );
 }
