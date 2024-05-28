@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ellenweii.github.io/static/css/main.6e067d9d.css",
+    "main.js": "/ellenweii.github.io/static/js/main.893ac96d.js",
+    "static/js/453.c15e359f.chunk.js": "/ellenweii.github.io/static/js/453.c15e359f.chunk.js",
+    "index.html": "/ellenweii.github.io/index.html",
+    "main.6e067d9d.css.map": "/ellenweii.github.io/static/css/main.6e067d9d.css.map",
+    "main.893ac96d.js.map": "/ellenweii.github.io/static/js/main.893ac96d.js.map",
+    "453.c15e359f.chunk.js.map": "/ellenweii.github.io/static/js/453.c15e359f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6e067d9d.css",
+    "static/js/main.893ac96d.js"
+  ]
+}
