@@ -1,0 +1,20 @@
+/* src/components/Competitions.css */
+
+.competitions-container {
+    text-align: left;
+    padding-left: 1vw;
+    padding-right: 5vw;
+    max-width: 700px;
+  }
+  
+  .competitions-container h1 {
+    text-align: left;
+    margin-bottom: 0px;
+  }
+  
+  .competitions-container p {
+    margin-top: 0px;
+    margin-bottom: 3vh;
+    font-size: large;
+  }
+  

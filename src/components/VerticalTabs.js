@@ -5,10 +5,12 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
-import { BrowserRouter as Router, Route, Routes, useHistory } from 'react-router-dom'; // Import necessary components
+import { BrowserRouter as Route, Routes } from 'react-router-dom'; // Import necessary components
 import ProjectGallery from './ProjectGallery';
-import ProjectDetails from '../data/projectData.js';
+import ProjectDetail from './ProjectDetail';
 import About from './About'; // Import About component
+import Contact from './Contact'; //Import Contact component
+import Competitions from './Competitions'; 
 
 
 function TabPanel(props) {
@@ -93,7 +95,7 @@ export default function VerticalTabs() {
         <About />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <Competitions />
       </TabPanel>
       <TabPanel value={value} index={2}>
         Item Three
@@ -114,10 +116,10 @@ export default function VerticalTabs() {
         Item Seven
       </TabPanel>
       <TabPanel value={value} index={8}>
-        Item Seven
+        Item Seven: ADD RESUME FILE
       </TabPanel>
       <TabPanel value={value} index={9}>
-        Item Seven
+        <Contact />
       </TabPanel>
       
     </Box>

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './ProjectItem.css'; // Add CSS for styling
 
 const ProjectItem = ({ project }) => {
   return (
