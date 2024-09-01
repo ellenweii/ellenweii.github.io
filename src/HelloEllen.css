@@ -1,0 +1,53 @@
+/* HelloEllen.css */
+.hello-ellen-container {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    justify-content: center; /* Center the content horizontally */
+    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+    padding: 20px;
+    max-width: 100vw; /* Ensure the container fits within the viewport width */
+    max-height: 100vh; /* Ensure the container fits within the viewport height */
+    box-sizing: border-box;
+    background-color: whitesmoke;
+  }
+  
+  .text-container {
+    flex: 1; /* Take up equal space */
+    text-align: left;
+    padding: 10px;
+    font-size: 1em; /* Adjust the text size */
+  }
+  
+  .image-container {
+    flex: 0 0 auto; /* Prevent the image container from stretching */
+    text-align: right;
+    padding: 10px;
+  }
+  
+  .image-container img {
+    max-width: 90%; /* Scale the image to be smaller */
+    height: auto;
+    border-radius: 8px; /* Optional: Add rounded corners to the image */
+    max-height: 80vh; /* Ensure the image doesn’t exceed 80% of the viewport height */
+  }
+  
+  /* Adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .hello-ellen-container {
+      flex-direction: column; /* Stack the items vertically on smaller screens */
+      text-align: center;
+      max-height: none; /* Remove max-height restriction for smaller screens */
+    }
+  
+    .text-container, .image-container {
+      flex: none; /* Prevent flex properties from causing layout issues */
+      width: 100%; /* Ensure each takes full width */
+      padding: 0; /* Reduce padding for a more compact layout */
+    }
+  
+    .image-container img {
+      max-width: 60%; /* Scale the image down even more for smaller screens */
+      max-height: none; /* Remove max-height restriction for smaller screens */
+    }
+  }
+  

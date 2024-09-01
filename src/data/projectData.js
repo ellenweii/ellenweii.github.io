@@ -6,7 +6,7 @@ const projectData = [
     category: 'competitions',
     title: 'Hackathon Project 1',
     subtitle: 'A project created for a hackathon',
-    image: '/clouds.jpg',
+    image: require('./clouds.jpg'),
     description: 'Detailed description of Hackathon Project 1',
     details: {
       technologies: 'React, Node.js, MongoDB',
@@ -20,13 +20,13 @@ const projectData = [
     category: 'competitions',
     title: 'Datathon Project 1',
     subtitle: 'A project created for a datathon',
-    image: '/bunny.jpg',
+    image: require('./clouds.jpg'),
     description: 'Detailed description of Datathon Project 1',
     details: {
       technologies: 'Python, Pandas, Scikit-learn',
       teamMembers: ['Dave', 'Eve', 'Frank'],
       date: 'February 2023',
-      link: 'https://github.com/example/datathon-project-1'
+      link: 'https://github.com/example/datathon-project-4'
     }
   },
   // Add more projects as needed

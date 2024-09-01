@@ -3,6 +3,7 @@
 import React from 'react';
 import ProjectItem from './ProjectItem';
 import projectData from '../data/projectData'; // Example data file
+import './ProjectGallery.css';
 
 const ProjectGallery = ({ category }) => {
   const filteredProjects = projectData.filter(project => project.category === category);

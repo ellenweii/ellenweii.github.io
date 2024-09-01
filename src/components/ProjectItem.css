@@ -1,6 +1,6 @@
 /* src/components/ProjectItem.css */
 
-.project-item {
+/*.project-item {
     border: 1px solid #ddd;
     padding: 16px;
     margin: 16px;
@@ -9,6 +9,18 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.2s;
   }
+*/
+  .project-item {
+    background-color: #fff; /* Example background color */
+    border: 1px solid #ddd; /* Example border */
+    border-radius: 4px; /* Example border radius for a subtle rounded corner */
+    padding: 16px; /* Padding inside the project item */
+    box-sizing: border-box; /* Ensures padding and borders are included in the width/height */
+    width: 100%; /* Make sure the item takes up full width within its flexbox container */
+    margin: 0 auto; /* Center the item within its container */
+    transition: transform 0.2s ease-in-out; /* Optional: Add a hover effect */
+  }
+
   
   .project-item:hover {
     transform: scale(1.05);

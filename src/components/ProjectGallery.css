@@ -1,0 +1,35 @@
+/* ProjectGallery.css */
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Reduced gap between items */
+    justify-content: center;
+  }
+  
+  .project-item {
+    flex: 1 1 calc(45% - 8px); /* Larger items, almost 2 per row */
+    box-sizing: border-box;
+    max-width: calc(45% - 8px); /* Match the flex-basis */
+  }
+  
+  .project-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1200px) {
+    .project-item {
+      flex: 1 1 calc(48% - 8px); /* Larger items for medium screens, slightly reduced width */
+      max-width: calc(48% - 8px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .project-item {
+      flex: 1 1 calc(100% - 5px); /* Full width items on small screens */
+      max-width: calc(100% - 5px);
+    }
+  }
+  

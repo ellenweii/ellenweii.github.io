@@ -2,42 +2,8 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-
-import { BrowserRouter as Route, Routes } from 'react-router-dom'; // Import necessary components
-import ProjectGallery from './ProjectGallery';
-import ProjectDetail from './ProjectDetail';
-import About from './About'; // Import About component
-import Contact from './Contact'; //Import Contact component
-import Competitions from './Competitions'; 
-
-
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`vertical-tabpanel-${index}`}
-      aria-labelledby={`vertical-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
-};
+import { useNavigate, useLocation, Outlet } from 'react-router-dom';
 
 function a11yProps(index) {
   return {
@@ -47,81 +13,69 @@ function a11yProps(index) {
 }
 
 export default function VerticalTabs() {
-  const [value, setValue] = React.useState(0);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const tabNames = [
+    "About",
+    "Projects/Competitions",
+    "Projects/Data Science",
+    "Projects/Machine Learning/AI",
+    "Projects/Finance",
+    "Projects/Bioinformatics",
+    "Lab",
+    "Work",
+    "Resume",
+    "Contact"
+  ];
+
+  const tabRoutes = [
+    "/about",
+    "/projects/competitions",
+    "/projects/data-science",
+    "/projects/machine-learning-ai",
+    "/projects/finance",
+    "/projects/bioinformatics",
+    "/lab",
+    "/work",
+    "/resume",
+    "/contact"
+  ];
+
+  // Determine the active tab based on the current location
+  const currentPath = location.pathname;
+  const value = tabRoutes.findIndex(route => route === currentPath);
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+    navigate(tabRoutes[newValue]);
   };
 
   return (
     <Box
-      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', 
-      minHeight: '100vh'}}
+      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', minHeight: '100vh' }}
     >
       <Tabs
         orientation="vertical"
         variant="fullWidth"
-        value={value}
+        value={value !== -1 ? value : 0}  // Default to 0 if no match
         onChange={handleChange}
         aria-label="Vertical tabs example"
-        sx={{ borderRight: 1, borderColor: 'divider',
-          minWidth: '25%', maxWidth: '25%'
-        }}
+        sx={{ borderRight: 1, borderColor: 'divider', minWidth: '25%', maxWidth: '25%' }}
       >
-
-        <Tab label="About" {...a11yProps(0)} 
-        sx = {{position: 'relative', top: '10vh'}} />
-        <Tab label="Projects/Competitions" {...a11yProps(1)}
-        sx = {{position: 'relative', top: '10vh'}} />
-        <Tab label="Projects/Data Science" {...a11yProps(2)}
-        sx = {{position: 'relative', top: '10vh'}} />
-        <Tab label="Projects/Machine Learning/AI" {...a11yProps(3)}
-        sx = {{position: 'relative', top: '10vh'}} />
-        <Tab label="Projects/Finance" {...a11yProps(4)}
-        sx = {{position: 'relative', top: '10vh'}} />
-        <Tab label="Projects/Bioinformatics" {...a11yProps(5)}
-        sx = {{position: 'relative', top: '10vh'}} />
-        <Tab label="Lab" {...a11yProps(6)}
-        sx = {{position: 'relative', top: '10vh'}} />
-        <Tab label="Work" {...a11yProps(7)}
-        sx = {{position: 'relative', top: '10vh'}} />
-        <Tab label="Resume" {...a11yProps(8)} 
-        sx={{position: 'relative', bottom: '-30vh'}}/>
-        <Tab label="Contact" {...a11yProps(9)} 
-        sx={{position: 'relative', bottom: '-30vh'}}/>
+        {tabNames.map((tabName, index) => (
+          <Tab 
+            key={index} 
+            label={tabName} 
+            {...a11yProps(index)} 
+            sx={{ position: 'relative', top: '10vh' }} 
+          />
+        ))}
       </Tabs>
 
-      <TabPanel value={value} index={0}>
-        <About />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <Competitions />
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        Item Three
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        Item Four
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-        Item Five
-      </TabPanel>
-      <TabPanel value={value} index={5}>
-        Item Six
-      </TabPanel>
-      <TabPanel value={value} index={6}>
-        Item Seven
-      </TabPanel>
-      <TabPanel value={value} index={7}>
-        Item Seven
-      </TabPanel>
-      <TabPanel value={value} index={8}>
-        Item Seven: ADD RESUME FILE
-      </TabPanel>
-      <TabPanel value={value} index={9}>
-        <Contact />
-      </TabPanel>
-      
+      {/* Render the content for the selected tab */}
+      <Box sx={{ flexGrow: 1 }}>
+        <Outlet />
+      </Box>
     </Box>
   );
 }
