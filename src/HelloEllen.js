@@ -1,7 +1,6 @@
-// src/HelloEllen.js
-
 import React from 'react';
 import './HelloEllen.css'; // Import the CSS file
+import ScrollButton from './components/ScrollButton'; // Import ScrollButton
 
 const HelloEllen = () => {
   return (
@@ -11,6 +10,7 @@ const HelloEllen = () => {
       </div>
       <div className="text-container">
         <h1>Hello, my name is Ellen</h1>
+        <ScrollButton /> {/* Place the ScrollButton under the text */}
       </div>
     </div>
   );

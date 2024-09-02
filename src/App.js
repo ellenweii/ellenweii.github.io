@@ -19,8 +19,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <HelloEllen />
-        
-        <ScrollButton/>
+      
       </header>
       <main id="main-content" className="main-content">
         <Routes>

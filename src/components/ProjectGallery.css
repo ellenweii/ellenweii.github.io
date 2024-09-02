@@ -1,35 +1,43 @@
-/* ProjectGallery.css */
 .project-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px; /* Reduced gap between items */
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust the min width to control item size */
+  gap: 16px; /* Spacing between items */
+  padding: 16px; /* Padding around the gallery */
+  justify-items: center; /* Center items in their grid cells */
+}
+
+.project-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  height: 350px; /* Fixed height for each project item */
+  transition: transform 0.2s ease-in-out; /* Hover effect */
+  text-align: center; /* Center text within the project item */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure content is evenly spaced */
+  overflow: hidden; /* Hide any overflowing content */
+  box-sizing: border-box; /* Ensure padding and borders are included in width/height */
+  width: 100%; /* Ensure the item fills the grid cell */
+  max-width: 600px; /* Optional: set a max width to prevent overly wide items */
+}
+
+.project-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px; /* Rounded corners */
+  display: block; /* Ensure the image fills the container properly */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .project-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Two items per row on medium screens */
   }
-  
-  .project-item {
-    flex: 1 1 calc(45% - 8px); /* Larger items, almost 2 per row */
-    box-sizing: border-box;
-    max-width: calc(45% - 8px); /* Match the flex-basis */
+}
+
+@media (max-width: 768px) {
+  .project-gallery {
+    grid-template-columns: 1fr; /* One item per row on small screens */
   }
-  
-  .project-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 1200px) {
-    .project-item {
-      flex: 1 1 calc(48% - 8px); /* Larger items for medium screens, slightly reduced width */
-      max-width: calc(48% - 8px);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .project-item {
-      flex: 1 1 calc(100% - 5px); /* Full width items on small screens */
-      max-width: calc(100% - 5px);
-    }
-  }
-  
+}

@@ -1,18 +1,20 @@
-// src/components/ProjectItem.js
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './ProjectItem.css'; // Add CSS for styling
+import './ProjectItem.css'; // Import the CSS file
 
 const ProjectItem = ({ project }) => {
   return (
-    <div className="project-item">
-      <img src={project.image} alt={project.title} />
-      <h3>
-        <Link to={`/project/${project.id}`}>{project.title}</Link>
-      </h3>
-      <p>{project.subtitle}</p>
-    </div>
+    <Link to={`/project/${project.id}`} className="project-item-link">
+      <div className="project-item">
+        <div className="image-container">
+          <img src={project.image} alt={project.title} />
+        </div>
+        <div className="content-container">
+          <h3>{project.title}</h3>
+          <p>{project.subtitle}</p>
+        </div>
+      </div>
+    </Link>
   );
 };
 

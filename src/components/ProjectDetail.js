@@ -1,9 +1,7 @@
-// src/components/ProjectDetail.js
-
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import projectData from '../data/projectData';
-import './ProjectDetail.css'; // Add CSS for styling if needed
+import './ProjectDetail.css';
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -13,25 +11,64 @@ const ProjectDetail = () => {
     return <div>Project not found</div>;
   }
 
+  // Split the description into paragraphs
+  const paragraphs = project.description.split('\n').filter(paragraph => paragraph.trim() !== '');
+
   return (
     <div className="project-detail">
       <h1>{project.title}</h1>
       <img src={project.image} alt={project.title} />
       <h2>{project.subtitle}</h2>
-      <p>{project.description}</p>
+      {paragraphs.map((paragraph, index) => (
+        <p key={index}>{paragraph}</p>
+      ))}
       <div className="project-details">
-        <h3>Technologies Used:</h3>
-        <p>{project.details.technologies}</p>
-        <h3>Team Members:</h3>
-        <ul>
-          {project.details.teamMembers.map((member, index) => (
-            <li key={index}>{member}</li>
-          ))}
-        </ul>
-        <h3>Date:</h3>
-        <p>{project.details.date}</p>
-        <h3>Project Link:</h3>
-        <p><a href={project.details.link} target="_blank" rel="noopener noreferrer">{project.details.link}</a></p>
+        {project.details.role && (
+          <>
+            <h3>Role:</h3>
+            <p>{project.details.role}</p>
+          </>
+        )}
+        {project.details.role_details && (
+          <>
+            <h3>Role Details:</h3>
+            <p>{project.details.role_details}</p>
+          </>
+        )}
+        {project.details.technologies && (
+          <>
+            <h3>Technologies Used:</h3>
+            <p>{project.details.technologies}</p>
+          </>
+        )}
+        {project.details.date && (
+          <>
+            <h3>Date:</h3>
+            <p>{project.details.date}</p>
+          </>
+        )}
+        {project.details.duration && (
+          <>
+            <h3>Duration:</h3>
+            <p>{project.details.duration}</p>
+          </>
+        )}
+        {project.details.affiliation && (
+          <>
+            <h3>Affiliation:</h3>
+            <p>{project.details.affiliation}</p>
+          </>
+        )}
+        {project.details.link && (
+          <>
+            <h3>Project Link:</h3>
+            <p>
+              <a href={project.details.link} target="_blank" rel="noopener noreferrer">
+                {project.details.link}
+              </a>
+            </p>
+          </>
+        )}
       </div>
     </div>
   );
