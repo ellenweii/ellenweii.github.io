@@ -8,8 +8,7 @@ const About = () => {
     <div className="about-container">
       <h1>Focus</h1>
       <p>
-        I work with data doing machine learning, data analysis, and research. Everything from data collection, to building models, to visualizations. Exploring AI, finance, and bioinformatics with data science.
-      </p>
+      I dive into data, working on machine learning, analysis, and research. From collecting data to building models and creating visualizations, I explore AI, finance, and bioinformatics through the lens of data science.      </p>
       <p>
         Looking for full-time data scientist/machine learning scientist/quantitative research roles. Currently based in NYC.
       </p>

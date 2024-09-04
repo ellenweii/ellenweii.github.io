@@ -1,0 +1,53 @@
+.lab-experience {
+    text-align: left;
+    max-width: 1200px;  /* Set a reasonable max-width for large screens */
+    margin: 0 auto;  /* Center the content */
+    padding-left: 1rem;  /* Default padding on the left */
+    padding-right: 3rem;  /* Padding on the right */
+    padding-top: 3rem;  /* Add space at the top of the container */
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Adjust padding on larger screens */
+  @media (min-width: 1200px) {
+    .lab-experience {
+      padding-right: 30%;  /* Increase right padding on larger screens */
+    }
+  }
+  
+  h1 {
+    text-align: left;
+    margin-bottom: 1.5rem;  /* Increase space between heading and content */
+    font-size: 2em;
+    color: #333;
+  }
+  
+  .lab-container {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 1vh;
+    color: #222;
+  }
+  
+  p {
+    margin-top: 0px;
+    margin-bottom: 3vh;
+    font-size: large;
+    line-height: 1.8;
+  }
+  
+  a {
+    color: #0056b3;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

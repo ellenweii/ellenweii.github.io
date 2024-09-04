@@ -1,4 +1,4 @@
-.about-container {
+.work-experience {
   text-align: left;
   max-width: 1500px;  /* Set a reasonable max-width for large screens */
   margin: 0 auto;  /* Center the content */
@@ -11,21 +11,37 @@
 
 /* Adjust padding on larger screens */
 @media (min-width: 1200px) {
-  .about-container {
+  .work-experience {
     padding-right: 30%;  /* Increase right padding on larger screens */
   }
 }
 
 h1 {
   text-align: left;
-  margin-bottom: 1.5rem;  /* Increase space between heading and content */
+  margin-bottom: 0px;
   font-size: 2em;
   color: #333;
 }
 
-p {
+.job-container {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  border-bottom: 1px solid #ddd;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 1vh;
+  color: #222;
+}
+
+.job-details {
   margin-top: 0px;
   margin-bottom: 3vh;
   font-size: large;
   line-height: 1.8;
+}
+
+.job-details strong {
+  font-weight: 600;
 }

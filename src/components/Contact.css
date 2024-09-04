@@ -1,19 +1,39 @@
-/* src/components/Contact.css */
-
 .contact-container {
-    text-align: left;
-    padding-left: 1vw;
-    padding-right: 5vw;
-    max-width: 700px;
-  }
-  
-  .contact-container h1 {
-    text-align: left;
-    margin-bottom: 0px;
-  }
-  
-  .contact-container p {
-    margin-top: 0px;
-    margin-bottom: 3vh;
-    font-size: large;
-  }
+  max-width: 700px; /* Maintain a consistent max-width with previous files */
+  margin: 0 auto; /* Center the content horizontally */
+  padding-left: 1rem; /* Left padding to align with other pages */
+  padding-right: 1rem; /* Right padding to match left padding */
+  padding-top: 4rem; /* Add some space at the top */
+  font-family: Arial, sans-serif; /* Use the same font as previous files */
+  text-align: left; /* Left-align the text */
+  color: #333; /* Consistent text color */
+}
+
+.contact-container h1 {
+  font-size: 1.8rem; /* Slightly smaller font size for the heading */
+  margin-bottom: 1rem; /* Space below the heading */
+}
+
+.contact-container p {
+  font-size: 1rem; /* Standard font size for readability */
+  margin-bottom: 1rem; /* Space between paragraphs */
+}
+
+.contact-container a {
+  color: #333; /* Match link color with the text color */
+  text-decoration: none; /* No underline for a minimal look */
+}
+
+.contact-container a:hover {
+  text-decoration: underline; /* Underline on hover for interactivity */
+}
+
+.contact-container p:last-of-type {
+  margin-top: 1.5rem; /* Add some space before the last paragraph */
+}
+
+/* Additional styles for icons */
+.contact-container i {
+  margin-right: 0.5rem; /* Space between the icon and the text */
+  color: #333; /* Ensure icons match the text color */
+}
