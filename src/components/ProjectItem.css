@@ -37,8 +37,8 @@
 
 .project-item .image-container img {
   width: 100%; /* Ensure the image covers the full width of the container */
-  height: 100%; /* Ensure the image covers the full height of the container */
-  object-fit: contain; /* Ensure the image scales to fit within the container without cropping */
+  height: auto; /* Ensure the image covers the full height of the container */
+  object-fit: cover; /* Ensure the image scales to fit within the container without cropping */
   border-radius: 4px; /* Ensure rounded edges */
   display: block; /* Remove any default inline spacing */
 }

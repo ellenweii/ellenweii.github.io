@@ -1,0 +1,68 @@
+/* Resume.css */
+.resume-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.resume-buttons {
+  margin-bottom: 20px;
+}
+
+.resume-buttons button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.resume-buttons button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.resume-buttons button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.resume-content {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resume-iframe-container {
+  width: 100%;
+  height: calc(100vh - 200px); /* 100% of viewport height minus some space for buttons and padding */
+  overflow: hidden; /* Hide any overflow content */
+}
+
+.resume-iframe {
+  width: 100%; /* Always take up 100% width */
+  height: 100%; /* Fill the available height */
+  border: none;
+}
+
+.download-button {
+  margin-top: 20px;
+}
+
+.download-button a {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.download-button a:hover {
+  background-color: #0056b3;
+}

@@ -10,6 +10,7 @@ const HelloEllen = () => {
       </div>
       <div className="text-container">
         <h1>Hello, my name is Ellen</h1>
+        <p>I'm a data scientist based in New York City.</p>
         <ScrollButton /> {/* Place the ScrollButton under the text */}
       </div>
     </div>

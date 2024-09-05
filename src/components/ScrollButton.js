@@ -1,17 +1,18 @@
-// src/components/ScrollButton.js
-
 import React from 'react';
-import './ScrollButton.css';
+import './ScrollButton.css'; // Import the ScrollButton CSS
 
 const ScrollButton = () => {
   const scrollToContent = () => {
-    document.getElementById('main-content').scrollIntoView({ behavior: 'smooth' });
+    const contentSection = document.getElementById('main-content'); // Get the content by ID
+    if (contentSection) {
+      contentSection.scrollIntoView({ behavior: 'smooth' }); // Scroll smoothly to the content
+    }
   };
 
   return (
-    <div className="scroll-button" onClick={scrollToContent}>
-      ⬇️
-    </div>
+    <button className="scroll-button" onClick={scrollToContent}>
+      <i class="fa-solid fa-arrow-down"></i>
+    </button>
   );
 };
 

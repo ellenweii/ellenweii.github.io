@@ -1,5 +1,4 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
@@ -20,7 +19,7 @@ export default function VerticalTabs() {
     "About",
     "Projects/Competitions",
     "Projects/Data Science",
-    "Projects/Machine Learning/AI",
+    "Projects/Machine Learning-AI",
     "Projects/Finance",
     "Projects/Bioinformatics",
     "Lab",
@@ -67,7 +66,19 @@ export default function VerticalTabs() {
             key={index} 
             label={tabName} 
             {...a11yProps(index)} 
-            sx={{ position: 'relative', top: '10vh' }} 
+            sx={{ 
+                position: 'relative', 
+                top: '8vh',
+              textAlign: 'right',  // Align the text to the right
+              justifyContent: 'flex-end',  // Align the entire tab content to the right
+              alignItems: 'flex-end',  // Align items within the tab to the right
+              whiteSpace: 'normal',  // Allow text to wrap
+              wordBreak: 'break-word',  // Break words when necessary
+              '.MuiTab-wrapper': {
+                width: '100%',
+                justifyContent: 'flex-end',  // Ensure the wrapper aligns content to the right
+              },
+            }} 
           />
         ))}
       </Tabs>

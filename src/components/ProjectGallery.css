@@ -1,38 +1,45 @@
 .project-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust the min width to control item size */
-  gap: 16px; /* Spacing between items */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically adjust number of columns based on available space */
+  gap: 24px; /* Increase spacing between items */
   padding: 16px; /* Padding around the gallery */
-  justify-items: center; /* Center items in their grid cells */
+  justify-items: center; /* Center items within their grid cells */
 }
 
 .project-item {
-  background-color: #fff;
+  background-color: #ffffff;
   border: 1px solid #ddd;
-  border-radius: 4px;
-  height: 350px; /* Fixed height for each project item */
+  border-radius: 8px; /* Increase border radius for better aesthetics */
+  height: 100%; /* Allow height to grow based on content */
   transition: transform 0.2s ease-in-out; /* Hover effect */
-  text-align: center; /* Center text within the project item */
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensure content is evenly spaced */
-  overflow: hidden; /* Hide any overflowing content */
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 16px; /* Add padding inside each project item */
   box-sizing: border-box; /* Ensure padding and borders are included in width/height */
   width: 100%; /* Ensure the item fills the grid cell */
-  max-width: 600px; /* Optional: set a max width to prevent overly wide items */
+  max-width: 450px; /* Set a max width to prevent items from being too wide */
+  transition: box-shadow 0.2s ease-in-out; /* Add smooth shadow on hover */
+}
+
+.project-item:hover {
+  box-shadow: 0 4px 8px rgba(210, 45, 34, 0.1); /* Hover shadow effect */
+  transform: translateY(-4px); /* Subtle lift on hover */
 }
 
 .project-item img {
   width: 100%;
   height: auto;
-  border-radius: 4px; /* Rounded corners */
-  display: block; /* Ensure the image fills the container properly */
+  border-radius: 8px;
+  margin-bottom: 16px; /* Add space below the image */
+  display: block;
 }
 
-/* Responsive adjustments */
 @media (max-width: 1200px) {
   .project-gallery {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Two items per row on medium screens */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 2-3 items per row depending on screen size */
   }
 }
 

@@ -1,20 +1,15 @@
-/* src/components/ScrollButton.css */
-
+/* ScrollButton.css */
 .scroll-button {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    cursor: pointer;
-    font-size: 24px;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-  }
-  
-  .scroll-button:hover {
-    background-color: #f0f0f0;
-  }
-  
+  background: none; /* No background */
+  border: none; /* No border */
+  color: black; /* Black arrow color */
+  font-size: 80px; /* Larger, bold arrow */
+  font-weight: bold; /* Make the arrow bold */
+  cursor: pointer; /* Cursor changes to pointer on hover */
+  padding: 0; /* Remove padding for a minimalistic look */
+  outline: none; /* Remove any default button outline */
+}
+
+.scroll-button:hover {
+  color: darkgray; /* Optional: Add a hover effect to change color */
+}

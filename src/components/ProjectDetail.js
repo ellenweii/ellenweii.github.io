@@ -11,17 +11,38 @@ const ProjectDetail = () => {
     return <div>Project not found</div>;
   }
 
-  // Split the description into paragraphs
-  const paragraphs = project.description.split('\n').filter(paragraph => paragraph.trim() !== '');
+  // Render the description based on the type of content
+  const renderDescription = () => {
+    return project.description.map((item, index) => {
+      if (item.type === 'heading') {
+        // Render headings
+        return <p key={index} dangerouslySetInnerHTML={{ __html: item.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} style={{ fontWeight: 'bold' }} />;
+      } else if (item.type === 'bullet') {
+        // Render top-level bullet points
+        return <li key={index} dangerouslySetInnerHTML={{ __html: item.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />;
+      } else if (item.type === 'sub-bullet') {
+        // Render sub-bullets (nested bullet points)
+        return <ul key={`sub-${index}`}><li dangerouslySetInnerHTML={{ __html: item.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} /></ul>;
+      } else if (item.type === 'paragraph') {
+        // Render paragraphs
+        return <p key={index} dangerouslySetInnerHTML={{ __html: item.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />;
+      } else {
+        return null;
+      }
+    });
+  };
 
   return (
     <div className="project-detail">
       <h1>{project.title}</h1>
       <img src={project.image} alt={project.title} />
       <h2>{project.subtitle}</h2>
-      {paragraphs.map((paragraph, index) => (
-        <p key={index}>{paragraph}</p>
-      ))}
+
+      {/* Render formatted description */}
+      <div className="project-description">
+        <ul>{renderDescription()}</ul>
+      </div>
+
       <div className="project-details">
         {project.details.role && (
           <>
