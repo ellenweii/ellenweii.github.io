@@ -191,7 +191,101 @@ const projectData = [
       affiliation: 'Decision Making in Stochastic Systems (UCLA ECE 239AS Graduate Course)',
       link: ''
     }
+  },
+  {
+    id: 6,
+    category: ['finance', 'data-science'],
+    title: 'Time series analysis of US Unemployment Rate',
+    subtitle: 'Housing Supply and Interest Rates on Employment Trends',
+    image: require('./stats170_hw1_2.png'),
+    description: [
+      {
+        type: 'paragraph',
+        content: `This project investigates the relationship between interest rates, housing supply, and unemployment in the United States. With rising interest rates and tech industry layoffs as a backdrop, we explored whether these economic factors could predict changes in unemployment. Additionally, we examined the potential impact of housing supply, hypothesizing that economic stressors may lead to increased real estate listings, which may correlate with shifts in employment patterns.`
+      },
+      {
+        type: 'paragraph',
+        content: `Using time series analysis, we analyzed three key datasets: interest rate, unemployment rate, and housing supply. Our analysis utilized methods such as exponential smoothing, polynomial regression, multiple regression, Vector Autoregression (VAR), ARIMA, decomposition, and autocorrelation to explore these relationships. By examining the interplay between these variables, we aimed to better understand the broader economic forces influencing unemployment trends.`
+      },
+      {
+        type: 'paragraph',
+        content: `You can download the full project as a PDF <a href="/STATS170_Project1.pdf" target="_blank" rel="noopener noreferrer">here</a>, and in PowerPoint format <a href="/STATS170_Project1_ppt.pdf" target="_blank" rel="noopener noreferrer">here</a>.`
+      }
+    ],
+    details: {
+      role: '',
+      role_details: 'Conducted time series analysis using R, applied various regression models and explored economic relationships',
+      technologies: 'R',
+      date: 'January 2023',
+      duration: '',
+      affiliation: 'UCLA STATS 170 - Time Series',
+      link: 'https://github.com/ellenweii/STATS-170'
+    }
+  },
+  {
+    id: 7,
+    category: ['finance', 'data-science'],
+    title: 'Time Series Forecasting with Random Forest and GBM',
+    subtitle: 'Benchmarking Unemployment Rate Forecasts Using Machine Learning Models',
+    image: require('./STATS170_Project2.png'),
+    description: [
+      {
+        type: 'paragraph',
+        content: `This project explores the use of Random Forest (RF) and Gradient Boosting Machine (GBM) models to forecast the US unemployment rate. Using feature engineering techniques, we included lag12, month, and trend as the key predictors in the models. Initial data plots revealed trends and seasonality, justifying the inclusion of these features in our benchmark regression, RF, and GBM models.`
+      },
+      {
+        type: 'paragraph',
+        content: `The Random Forest model was trained with 500 trees, and lag12 was identified as the most important variable. It achieved a Mean Absolute Percentage Error (MAPE) of 0.1991 and an RMSE of 0.776. The GBM model, also trained with 500 trees, performed better with a MAPE of 0.1038 and an RMSE of 0.434, showing stronger performance compared to the Random Forest model and the benchmark regression.`
+      },
+      {
+        type: 'paragraph',
+        content: `You can download the full project as a PDF <a href="/STATS170_Project2.pdf" target="_blank" rel="noopener noreferrer">here</a>, and in PowerPoint format <a href="/STATS170_Project1_ppt.pdf" target="_blank" rel="noopener noreferrer">here</a>.`
+      }
+    ],
+    details: {
+      role: '',
+      role_details: 'Developed Random Forest and GBM models to forecast unemployment rate, conducted feature engineering, and benchmarked model performance',
+      technologies: 'Python, Sklearn, Statsmodels, Matplotlib',
+      date: 'January 2023',
+      duration: '',
+      affiliation: 'UCLA STATS 170 - Time Series Analysis',
+      link: 'https://github.com/ellenweii/STATS-170'
+    }
+  },
+  {
+    id: 8,
+    category: ['competitions', 'finance'],
+    title: 'Datafest 2023',
+    subtitle: 'Analyzing Pro Bono Legal Services Across the US',
+    image: require('./datafest2023.png'),
+    description: [
+      {
+        type: 'paragraph',
+        content: `This project was part of the DataFest 2023 challenge, where we worked with real data provided by the American Bar Association (ABA). The challenge involved analyzing pro bono legal services provided through an online platform. The ABA sought insights on trends in legal questions asked by clients and ways to better prepare volunteer attorneys to address evolving needs across different legal categories.`
+      },
+      {
+        type: 'paragraph',
+        content: `Our analysis included time series analysis of legal questions submitted by month, visualizations such as a USA heat map comparing the number of clients and attorneys, and an exploration of trends in the types of questions asked. We also conducted a Kaplan-Meier survival analysis to examine user engagement over time. These insights helped the ABA understand regional demand for legal aid and anticipate future trends, enabling them to optimize volunteer recruitment and outreach strategies.`
+      },
+      {
+        type: 'paragraph',
+        content: `You can view our presentation slides <a href="/datafest2023_ppt.pdf" target="_blank" rel="noopener noreferrer">here</a>.`
+      }
+    ],
+    details: {
+      role: '',
+      role_details: 'Performed time series analysis, geographic visualizations, and survival analysis to assess trends in legal aid',
+      technologies: 'R, Python',
+      date: 'April 2023',
+      duration: '3 days',
+      affiliation: 'DataFest 2023 - UCLA',
+      link: 'https://github.com/ellenweii/datafest2023'
+    }
   }
+  
+  
+
+  
 ];
 
 export default projectData;

@@ -1,6 +1,6 @@
 .lab-experience {
     text-align: left;
-    max-width: 1200px;  /* Set a reasonable max-width for large screens */
+    max-width: 1500px;  /* Set a reasonable max-width for large screens */
     margin: 0 auto;  /* Center the content */
     padding-left: 1rem;  /* Default padding on the left */
     padding-right: 3rem;  /* Padding on the right */
@@ -18,7 +18,7 @@
   
   h1 {
     text-align: left;
-    margin-bottom: 1.5rem;  /* Increase space between heading and content */
+    margin-bottom: 0px;  /* Increase space between heading and content */
     font-size: 2em;
     color: #333;
   }
