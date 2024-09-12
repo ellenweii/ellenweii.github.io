@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.b06facff.css",
-    "main.js": "/static/js/main.afa8c814.js",
+    "main.css": "/static/css/main.7f07b3f5.css",
+    "main.js": "/static/js/main.d845c76c.js",
+    "static/media/STATS170_Project2.png": "/static/media/STATS170_Project2.41921bb6f2ef2a5c1c5a.png",
     "static/media/datafest_group.jpg": "/static/media/datafest_group.fa4bb1e1e9e7df1ec1d6.jpg",
     "static/media/project_bioquest.png": "/static/media/project_bioquest.a44b038fc1c805b66cc5.png",
+    "static/media/datafest2023.png": "/static/media/datafest2023.1358c84a400f6d863434.png",
     "static/media/project_ourfridge.png": "/static/media/project_ourfridge.4c3091c65bb1c941592f.png",
     "static/media/ece239as_paper_review.png": "/static/media/ece239as_paper_review.c80505163954c036cd11.png",
     "static/media/profilepic.jpg": "/static/media/profilepic.47f0e127680af69c4091.jpg",
+    "static/media/stats170_hw1_2.png": "/static/media/stats170_hw1_2.444bad09f9344bd80708.png",
     "static/media/statsc183.jpg": "/static/media/statsc183.680a1c104db186e54ca2.jpg",
     "index.html": "/index.html",
-    "main.b06facff.css.map": "/static/css/main.b06facff.css.map",
-    "main.afa8c814.js.map": "/static/js/main.afa8c814.js.map"
+    "main.7f07b3f5.css.map": "/static/css/main.7f07b3f5.css.map",
+    "main.d845c76c.js.map": "/static/js/main.d845c76c.js.map"
   },
   "entrypoints": [
-    "static/css/main.b06facff.css",
-    "static/js/main.afa8c814.js"
+    "static/css/main.7f07b3f5.css",
+    "static/js/main.d845c76c.js"
   ]
 }
