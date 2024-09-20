@@ -12,7 +12,15 @@ const Work = () => {
           <strong>Location:</strong> New York City<br />
           <strong>Date:</strong> July 2024-Current<br />
           <strong>Responsibilities:</strong> Involved in data engineering tasks, including fixing software monitoring systems, writing new software code, and performing data analysis.<br />
-          <strong>Technologies:</strong> Python, Azure DevOps, ServiceNow
+          <ul>
+            <li>Developed an automated pipeline to pull, modify, and update ServiceNow data via REST API, integrated with Azure DevOps utilizing YAML pipelines. </li>
+            <li>Built a custom UI Page visualize herarchical workflow chains using JavaScript, HTML, CSS, and GlideRecord.</li>
+            <li>Implemented dynamic, clickable elements to streamline navigation and track dependencies, improving system traceability and issue identification.</li>
+            <li>Integrated server-side logic with front-end components via GlideAjax for real-time data retrieval.</li>
+          </ul>
+
+          <strong>Technologies:</strong> Python, Azure DevOps, ServiceNow, Javascript, HTML, CSS, UI Pages, GlideRecord, JSON <br />
+          <strong>Key Skills:</strong> Hierarchical Data Structures, Dynamic UI Development, ServiceNow Scripting
         </p>
       </div>
 

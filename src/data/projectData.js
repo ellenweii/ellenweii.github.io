@@ -281,7 +281,38 @@ const projectData = [
       affiliation: 'DataFest 2023 - UCLA',
       link: 'https://github.com/ellenweii/datafest2023'
     }
+  },
+  {
+    id: 9,
+    category: 'finance',
+    title: 'Course Project: Cryptocurrencies',
+    subtitle: 'Exploring the Financial Architecture and Future of Decentralized Finance',
+    image: require('./project_crypto.jpg'),
+    description: [
+      {
+        type: 'paragraph',
+        content: `This project, completed as part of ECON 19: Financial Architecture of the United States, focuses on the rise of cryptocurrencies, with a special emphasis on Ethereum. The paper explores the history and evolution of decentralized finance (DeFi) and cryptocurrencies, from early ideas by David Chaum and Wei Dai, to the emergence of Bitcoin and Ethereum as transformative forces in the global financial system.`
+      },
+      {
+        type: 'paragraph',
+        content: `The study examines the mechanics of blockchain technology, the role of smart contracts on the Ethereum platform, and the transition of Ethereum from a proof-of-work (PoW) to a proof-of-stake (PoS) system. The implications of DeFi on traditional financial systems, as well as the challenges posed by unregulated ecosystems, are discussed. Furthermore, the project analyzes the impact of key events such as the collapse of FTX and how DeFi might evolve in response to these market disruptions.`
+      },
+      {
+        type: 'paragraph',
+        content: `You can view the full course paper <a href="/econ19_paper.pdf" target="_blank" rel="noopener noreferrer">here</a>.`
+      }
+    ],
+    details: {
+      role: 'Researcher',
+      role_details: 'Conducted in-depth research on the history, technology, and financial implications of cryptocurrencies and DeFi',
+      technologies: 'Ethereum, Blockchain, Smart Contracts',
+      date: 'December 2022',
+      duration: '4 weeks',
+      affiliation: 'ECON 19: Financial Architecture of the United States - UCLA',
+      link: null
+    }
   }
+  
   
   
 
