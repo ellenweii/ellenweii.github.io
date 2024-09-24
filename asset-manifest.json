@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7f07b3f5.css",
-    "main.js": "/static/js/main.4ac0ac2c.js",
+    "main.css": "/static/css/main.dce58428.css",
+    "main.js": "/static/js/main.a4c3ab68.js",
     "static/media/STATS170_Project2.png": "/static/media/STATS170_Project2.41921bb6f2ef2a5c1c5a.png",
     "static/media/datafest_group.jpg": "/static/media/datafest_group.fa4bb1e1e9e7df1ec1d6.jpg",
     "static/media/project_bioquest.png": "/static/media/project_bioquest.a44b038fc1c805b66cc5.png",
@@ -11,15 +11,16 @@
     "static/media/cs188_projects.png": "/static/media/cs188_projects.3c45e7b9e88b19c70acd.png",
     "static/media/ece239as_paper_review.png": "/static/media/ece239as_paper_review.c80505163954c036cd11.png",
     "static/media/profilepic.jpg": "/static/media/profilepic.47f0e127680af69c4091.jpg",
+    "static/media/STATS143_project.png": "/static/media/STATS143_project.e5abb69ec6076da32c1e.png",
     "static/media/stats170_hw1_2.png": "/static/media/stats170_hw1_2.444bad09f9344bd80708.png",
     "static/media/statsc183.jpg": "/static/media/statsc183.680a1c104db186e54ca2.jpg",
     "static/media/project_crypto.jpg": "/static/media/project_crypto.cc8bc8a1c2e7741cf329.jpg",
     "index.html": "/index.html",
-    "main.7f07b3f5.css.map": "/static/css/main.7f07b3f5.css.map",
-    "main.4ac0ac2c.js.map": "/static/js/main.4ac0ac2c.js.map"
+    "main.dce58428.css.map": "/static/css/main.dce58428.css.map",
+    "main.a4c3ab68.js.map": "/static/js/main.a4c3ab68.js.map"
   },
   "entrypoints": [
-    "static/css/main.7f07b3f5.css",
-    "static/js/main.4ac0ac2c.js"
+    "static/css/main.dce58428.css",
+    "static/js/main.a4c3ab68.js"
   ]
 }
