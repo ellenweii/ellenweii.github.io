@@ -239,7 +239,7 @@ const projectData = [
       },
       {
         type: 'paragraph',
-        content: `You can download the full project as a PDF <a href="/STATS170_Project2.pdf" target="_blank" rel="noopener noreferrer">here</a>, and in PowerPoint format <a href="/STATS170_Project1_ppt.pdf" target="_blank" rel="noopener noreferrer">here</a>.`
+        content: `You can download the full project as a PDF <a href="/STATS170_Project2.pdf" target="_blank" rel="noopener noreferrer">here</a>.`
       }
     ],
     details: {
@@ -284,7 +284,7 @@ const projectData = [
   },
   {
     id: 9,
-    category: 'finance',
+    category: ['finance'],
     title: 'Course Project: Cryptocurrencies',
     subtitle: 'Exploring the Financial Architecture and Future of Decentralized Finance',
     image: require('./project_crypto.jpg'),
@@ -299,7 +299,7 @@ const projectData = [
       },
       {
         type: 'paragraph',
-        content: `You can view the full course paper <a href="/econ19_paper.pdf" target="_blank" rel="noopener noreferrer">here</a>.`
+        content: `You can download the full paper as a PDF <a href="/ECON19 Paper.pdf" target="_blank" rel="noopener noreferrer">here</a>.`
       }
     ],
     details: {
@@ -311,7 +311,132 @@ const projectData = [
       affiliation: 'ECON 19: Financial Architecture of the United States - UCLA',
       link: null
     }
+  },
+  {
+    id: 10,
+    category: ['data-science', 'machine-learning-ai'],
+    title: 'Object Detection Algorithms',
+    subtitle: 'Exploring Transfer Learning on Aerial Maritime Images',
+    image: require('./cs188_finalproject.png'),
+    description: [
+      {
+        type: 'paragraph',
+        content: `Object detection is a key task in computer vision that involves identifying and localizing objects within images. This project explores various R-CNN-based deep learning algorithms for object detection, focusing on transfer learning performance on a custom dataset of aerial maritime images. We compared five R-CNN models (Faster R-CNN, Cascade R-CNN, Dynamic R-CNN, Grid R-CNN, and Libra R-CNN) using OpenMMLab’s MMDetection toolbox. These models were pretrained on the Microsoft COCO dataset and fine-tuned on a dataset consisting of five classes: car, lift, jet ski, dock, and boat.`
+      },
+      {
+        type: 'paragraph',
+        content: `Our hypothesis was that the Cascade, Dynamic, Grid, and Libra R-CNN models would outperform Faster R-CNN on the new dataset due to their enhanced training techniques. The results showed that Cascade, Libra, and Dynamic R-CNN performed better, while Grid R-CNN surprisingly underperformed compared to Faster R-CNN. We analyzed model performance based on mean average precision (mAP) and explored class-wise performance, training time, and model size. We also visualized test outputs for qualitative comparison and examined the models’ robustness against adversarial attacks.`
+      }
+    ],
+    details: {
+      role: 'Machine Learning Engineer',
+      role_details: 'Compared and evaluated multiple R-CNN models for object detection, performed transfer learning, and analyzed adversarial robustness',
+      technologies: 'Python, TensorFlow, OpenMMLab, MMDetection',
+      date: 'March 2023',
+      duration: '10 weeks',
+      affiliation: 'CS188: Deep Learning for Computer Vision - UCLA',
+      link: 'https://ucladeepvision.github.io/CS188-Projects-2023Winter/2023/03/26/team20-object-detection.html'
+    }
+  },
+  {
+    id: 11,
+    category: ['data-science', 'machine-learning-ai'],
+    title: 'Computer Vision Course Projects',
+    subtitle: 'Exploring Image Classification, Neural Networks, and Advanced Vision Techniques',
+    image: require('./cs188_projects.png'),
+    description: [
+      {
+        type: 'paragraph',
+        content: `This project showcases a series of assignments completed as part of a Computer Vision course, each focusing on different deep learning and computer vision techniques using the MiniPlaces dataset.`
+      },
+      {
+        type: 'paragraph',
+        content: `<strong>1. Image Classification and kNN Classifier:</strong> Prepared data for image classification using the MiniPlaces dataset. I created two new datasets, TinyPlaces-Binary and TinyPlaces-Multiclass, and implemented k-Nearest Neighbor (kNN), linear, logistic, and softmax regression classifiers to evaluate their performance.`
+      },
+      {
+        type: 'paragraph',
+        content: `<strong>2. Neural Networks in PyTorch:</strong> Built and trained fully-connected and convolutional neural networks (CNNs) using PyTorch. I also designed and tested a custom model for image classification, competing on a test leaderboard for extra credit.`
+      },
+      {
+        type: 'paragraph',
+        content: `<strong>3. ResNet Fine-tuning and Vision Transformers:</strong> Implemented and fine-tuned ResNet models and built a Vision Transformer (ViT) from scratch. Additionally, I visualized the behavior of CNNs to gain insight into their internal workings.`
+      },
+      {
+        type: 'paragraph',
+        content: `<strong>4. Segmentation and Generative Models:</strong> Focused on advanced topics such as semantic and instance segmentation, Generative Adversarial Networks (GANs), and Neural Radiance Fields (NeRFs). I applied these models for object detection, image generation, and 3D image representation.`
+      },
+      {
+        type: 'paragraph',
+        content: `These assignments provided hands-on experience with image classification, neural networks, and cutting-edge techniques in computer vision.`
+      },
+    ],
+    details: {
+      role: null,
+      role_details: 'Implemented classifiers, neural networks, ResNet, Vision Transformers, and GANs using PyTorch and various datasets',
+      technologies: 'Python, PyTorch, ResNet, Vision Transformer, GANs, NeRFs',
+      date: 'March 2023',
+      duration: '10 weeks',
+      affiliation: 'CS188: Deep Learning for Computer Vision - UCLA',
+      link: null
+    }
+  },
+  {
+    id: 12,
+    category: 'data-science',
+    title: 'Data Management Systems Course Projects',
+    subtitle: 'Storing, managing, and accessing large-scale data',
+    image: require('./cs143_projects.png'),
+    description: [
+      {
+        type: 'paragraph',
+        content: `The Data Management Systems course (CS143) is where I learned how to store, manage, and access large-scale data using relational and non-relational databases. The course focused on relational database management systems (RDBMS), SQL, and an introduction to non-relational databases. Key topics included relational models, relational algebra, database design, query execution, transactions, and NoSQL systems.`
+      },
+      {
+        type: 'paragraph',
+        content: `<strong>1. SQL Schema Design:</strong> Designed and implemented a complete SQL schema, defining the structure of a relational database to efficiently store and manage data. This involved understanding the relational model, creating entity-relationship diagrams, and applying normalization.`
+      },
+      {
+        type: 'paragraph',
+        content: `<strong>2. Writing PostgreSQL Queries with Python:</strong> Developed complex SQL queries using PostgreSQL to perform data analysis and connected to the database via Python for real-world data manipulation and retrieval. This assignment helped me gain mastery of relational query languages and database interaction.`
+      },
+      {
+        type: 'paragraph',
+        content: `<strong>3. Functional Dependencies and Relational Design:</strong> Explored functional dependencies and relational design theory to create optimized table structures, reducing redundancy and ensuring data integrity in RDBMS.`
+      },
+      {
+        type: 'paragraph',
+        content: `<strong>4. Large-Scale Data Processing with PySpark and Apache Spark:</strong> Worked with PySpark and Apache Spark for distributed data processing, gaining hands-on experience with non-relational data management systems. This assignment covered the basics of processing large datasets using Spark’s parallel computing framework.`
+      },
+      {
+        type: 'paragraph',
+        content: `<strong>5. Working with MongoDB:</strong> Used MongoDB, a popular NoSQL database, to manage document-based data. I applied query operations, schema design, and indexing strategies specific to NoSQL systems.`
+      },
+      {
+        type: 'paragraph',
+        content: `<strong>6. B+ Trees, Disk Storage, and Join Algorithms:</strong> Studied how B+ trees are used for indexing and optimizing query execution. Additionally, I explored how disk storage works in DBMS and implemented join algorithms for efficient data retrieval.`
+      },
+      {
+        type: 'paragraph',
+        content: `<strong>7. Transaction Scheduling and ACID Guarantees:</strong> Learned how to manage transaction scheduling and maintain database consistency through concurrency control. I also gained an understanding of the ACID properties (Atomicity, Consistency, Isolation, Durability) critical to database transactions.`
+      },
+      {
+        type: 'paragraph',
+        content: `This course provided a comprehensive understanding of both relational and non-relational database systems, data modeling, and essential database management techniques, preparing me for real-world data analysis and application development.`
+      }
+    ],
+    details: {
+      role: 'Data Engineer',
+      role_details: 'Designed relational schemas, wrote complex PostgreSQL queries, worked with PySpark and MongoDB, and implemented database storage and transaction scheduling techniques',
+      technologies: 'SQL, PostgreSQL, Python, PySpark, Apache Spark, MongoDB, B+ Trees',
+      date: 'June 2023',
+      duration: '10 weeks',
+      affiliation: 'CS143: Data Management Systems - UCLA',
+      link: null
+    }
   }
+  
+  
+
   
   
   
