@@ -6,7 +6,9 @@ import './ProjectGallery.css';
 const ProjectGallery = ({ category }) => {
   // Filter projects based on whether their category array contains the selected category
   const filteredProjects = projectData.filter(project => 
-    project.category.includes(category)  // Check if the category is in the array
+    Array.isArray(project.category) 
+      ? project.category.includes(category)  // Check if category is in the array
+      : project.category === category        // Handle single-category items
   );
 
   return (

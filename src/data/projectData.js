@@ -433,14 +433,44 @@ const projectData = [
       affiliation: 'CS143: Data Management Systems - UCLA',
       link: null
     }
+  },
+  {
+    id: 13,
+    category: 'data-science',
+    title: 'Optimizing Computational Efficiency in Function Optimization',
+    subtitle: 'A Comparative Study on Sequential Designs for Function Optimization',
+    image: require('./STATS143_project.png'),
+    description: [
+      {
+        type: 'paragraph',
+        content: `This project, completed as part of STATS 143: Research in Statistics, focuses on optimizing computational efficiency through sequential designs for function optimization. The study compares different approaches in function optimization by analyzing surrogate models, infill criteria, and initial design algorithms, using R and the mlrMBO toolbox for Bayesian optimization.`
+      },
+      {
+        type: 'paragraph',
+        content: `We explored the impact of surrogate models like Kriging and Random Forest, as well as infill criteria such as Expected Improvement (EI) and Confidence Bound (CB). Initial design strategies like Random Latin Hypercube Sampling (LHS), Optimum LHS, and Maximin LHS were also compared to assess their effect on optimization performance.`
+      },
+      {
+        type: 'paragraph',
+        content: `I wrote the code, ran the tests, read research papers in preparation, and created visualizations in R to analyze the results. The project provides insights into selecting optimal configurations for diverse optimization tasks by evaluating convergence, computational efficiency, and model accuracy across various function landscapes.`
+      },
+      {
+        type: 'paragraph',
+        content: `You can view the full project report as a PDF <a href="https://github.com/ellenweii/STATS143_FinalProject/blob/main/Stats_143_Final_Report.pdf" target="_blank" rel="noopener noreferrer">here</a>,
+         or visit my project's GitHub repository <a href="https://github.com/ellenweii/STATS143_FinalProject" target="_blank" rel="noopener noreferrer">here</a>.`
+         
+      }
+    ],
+    details: {
+      role: 'Researcher',
+      role_details: 'Wrote the code, ran tests, reviewed literature, and created visualizations in R to evaluate function optimization methods using Bayesian optimization techniques',
+      technologies: 'R, mlrMBO, Kriging, Random Forest',
+      date: 'Spring 2024',
+      duration: '4 weeks',
+      affiliation: 'STATS 143: Research in Statistics - UCLA',
+      link: 'https://github.com/ellenweii/STATS143_FinalProject'
+    }
   }
   
-  
-
-  
-  
-  
-
   
 ];
 
