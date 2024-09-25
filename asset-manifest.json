@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.dce58428.css",
-    "main.js": "/static/js/main.a4c3ab68.js",
+    "main.js": "/static/js/main.2f0b63a8.js",
+    "static/media/STATS140_poster.jpg": "/static/media/STATS140_poster.e5e42fd4dc9c26d7519d.jpg",
     "static/media/STATS170_Project2.png": "/static/media/STATS170_Project2.41921bb6f2ef2a5c1c5a.png",
     "static/media/datafest_group.jpg": "/static/media/datafest_group.fa4bb1e1e9e7df1ec1d6.jpg",
     "static/media/project_bioquest.png": "/static/media/project_bioquest.a44b038fc1c805b66cc5.png",
@@ -14,13 +15,14 @@
     "static/media/STATS143_project.png": "/static/media/STATS143_project.e5abb69ec6076da32c1e.png",
     "static/media/stats170_hw1_2.png": "/static/media/stats170_hw1_2.444bad09f9344bd80708.png",
     "static/media/statsc183.jpg": "/static/media/statsc183.680a1c104db186e54ca2.jpg",
+    "static/media/STATS141_dashboard.png": "/static/media/STATS141_dashboard.fb25d552b94d51270f04.png",
     "static/media/project_crypto.jpg": "/static/media/project_crypto.cc8bc8a1c2e7741cf329.jpg",
     "index.html": "/index.html",
     "main.dce58428.css.map": "/static/css/main.dce58428.css.map",
-    "main.a4c3ab68.js.map": "/static/js/main.a4c3ab68.js.map"
+    "main.2f0b63a8.js.map": "/static/js/main.2f0b63a8.js.map"
   },
   "entrypoints": [
     "static/css/main.dce58428.css",
-    "static/js/main.a4c3ab68.js"
+    "static/js/main.2f0b63a8.js"
   ]
 }
