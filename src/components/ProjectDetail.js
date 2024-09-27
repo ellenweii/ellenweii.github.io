@@ -14,20 +14,23 @@ const ProjectDetail = () => {
   // Render the description based on the type of content
   const renderDescription = () => {
     return project.description.map((item, index) => {
-      if (item.type === 'heading') {
-        // Render headings
-        return <p key={index} dangerouslySetInnerHTML={{ __html: item.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} style={{ fontWeight: 'bold' }} />;
-      } else if (item.type === 'bullet') {
-        // Render top-level bullet points
-        return <li key={index} dangerouslySetInnerHTML={{ __html: item.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />;
-      } else if (item.type === 'sub-bullet') {
-        // Render sub-bullets (nested bullet points)
-        return <ul key={`sub-${index}`}><li dangerouslySetInnerHTML={{ __html: item.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} /></ul>;
-      } else if (item.type === 'paragraph') {
-        // Render paragraphs
-        return <p key={index} dangerouslySetInnerHTML={{ __html: item.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />;
-      } else {
-        return null;
+      const formattedContent = item.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      
+      switch (item.type) {
+        case 'heading':
+          return <p key={index} dangerouslySetInnerHTML={{ __html: formattedContent }} style={{ fontWeight: 'bold' }} />;
+        case 'bullet':
+          return <li key={index} dangerouslySetInnerHTML={{ __html: formattedContent }} />;
+        case 'sub-bullet':
+          return (
+            <ul key={`sub-${index}`}>
+              <li dangerouslySetInnerHTML={{ __html: formattedContent }} />
+            </ul>
+          );
+        case 'paragraph':
+          return <p key={index} dangerouslySetInnerHTML={{ __html: formattedContent }} />;
+        default:
+          return null;
       }
     });
   };

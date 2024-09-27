@@ -1,39 +1,76 @@
 .contact-container {
-  max-width: 700px; /* Maintain a consistent max-width with previous files */
+  max-width: 700px; /* Maintain a consistent max-width */
   margin: 0 auto; /* Center the content horizontally */
-  padding-left: 1rem; /* Left padding to align with other pages */
-  padding-right: 1rem; /* Right padding to match left padding */
-  padding-top: 4rem; /* Add some space at the top */
-  font-family: Arial, sans-serif; /* Use the same font as previous files */
-  text-align: left; /* Left-align the text */
-  color: #333; /* Consistent text color */
+  padding-left: 1rem; 
+  padding-right: 1rem; 
+  padding-top: 4rem; 
+  font-family: Arial, sans-serif;
+  text-align: left; 
+  color: #333; 
 }
 
 .contact-container h1 {
-  font-size: 1.8rem; /* Slightly smaller font size for the heading */
-  margin-bottom: 1rem; /* Space below the heading */
+  font-size: 1.8rem; 
+  margin-bottom: 1rem; 
 }
 
 .contact-container p {
-  font-size: 1rem; /* Standard font size for readability */
-  margin-bottom: 1rem; /* Space between paragraphs */
+  font-size: 1rem; 
+  margin-bottom: 1rem; 
 }
 
 .contact-container a {
-  color: #333; /* Match link color with the text color */
-  text-decoration: none; /* No underline for a minimal look */
+  color: #333; 
+  text-decoration: none; 
 }
 
 .contact-container a:hover {
-  text-decoration: underline; /* Underline on hover for interactivity */
+  text-decoration: underline; 
 }
 
 .contact-container p:last-of-type {
-  margin-top: 1.5rem; /* Add some space before the last paragraph */
+  margin-top: 1.5rem; 
 }
 
-/* Additional styles for icons */
 .contact-container i {
-  margin-right: 0.5rem; /* Space between the icon and the text */
-  color: #333; /* Ensure icons match the text color */
+  margin-right: 0.5rem;
+  color: #333; 
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 2rem; /* Reduce padding on smaller screens */
+    max-width: 90%; /* Use a percentage width to allow it to scale */
+  }
+
+  .contact-container h1 {
+    font-size: 1.5rem; /* Adjust heading size for smaller screens */
+  }
+
+  .contact-container p {
+    font-size: 0.9rem; /* Adjust font size for readability on small screens */
+  }
+
+  .contact-container a {
+    word-break: break-all; /* Break long links to fit on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    max-width: 100%; /* Ensure it fills the screen on very small devices */
+  }
+
+  .contact-container h1 {
+    font-size: 1.2rem; /* Further reduce the font size on very small screens */
+  }
+
+  .contact-container p {
+    font-size: 0.8rem; /* Smaller text for very small screens */
+  }
 }

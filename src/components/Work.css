@@ -19,7 +19,7 @@
 h1 {
   text-align: left;
   margin-bottom: 0px;
-  font-size: 2em;
+  font-size: 2rem;  /* Changed from em to rem */
   color: #333;
 }
 
@@ -30,7 +30,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.5rem;  /* Changed from em to rem */
   margin-bottom: 1vh;
   color: #222;
 }
@@ -38,10 +38,30 @@ h2 {
 .job-details {
   margin-top: 0px;
   margin-bottom: 3vh;
-  font-size: large;
+  font-size: 1rem;  /* Changed to rem for consistency */
   line-height: 1.8;
 }
 
 .job-details strong {
   font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem; /* Smaller font size for smaller screens */
+  }
+
+  h2 {
+    font-size: 1.25rem; /* Adjust font size for smaller screens */
+  }
+
+  .job-details {
+    font-size: 0.875rem; /* Adjust content font size for better readability on small screens */
+  }
+
+  .work-experience {
+    padding-left: 0.5rem;
+    padding-right: 1rem;  /* Reduce padding for smaller screens */
+  }
 }

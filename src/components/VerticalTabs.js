@@ -41,27 +41,26 @@ export default function VerticalTabs() {
     "/contact"
   ];
 
-  // Determine the active tab based on the current location
+  // Get the current path from the URL
   const currentPath = location.pathname;
 
-  // Find the first matching tabRoute that the current path starts with
+  // Detect if the current path is a project detail page by checking for an ID in the URL
+  const isProjectDetailPage = currentPath.match(/\/projects\/[^/]+\/\d+/);
+
+  // Find the active tab based on the current path
   const value = tabRoutes.findIndex(route => currentPath.startsWith(route));
 
   const handleChange = (event, newValue) => {
     const newRoute = tabRoutes[newValue];
 
-    // Check if the URL is a project detail page by looking for a project ID at the end
-    const isProjectDetailPage = currentPath.split("/").length === 4 && !isNaN(currentPath.split("/").pop());
-
-    // If on a project detail page and the same tab is clicked, navigate back to the gallery
+    // If we're already on the tab and it's a project detail page, navigate back to the gallery view
     if (isProjectDetailPage && currentPath.startsWith(newRoute)) {
-      // Remove the project ID part from the URL and navigate to the gallery view
-      navigate(newRoute, { replace: true }); // Force navigation back to the gallery
-    } else if (currentPath === newRoute) {
-      // If you're already on the same tab, force re-navigation to refresh the gallery
+      navigate(newRoute, { replace: true }); // Navigate back to the gallery view
+    } else if (!isProjectDetailPage && currentPath === newRoute) {
+      // If already in the gallery and click the same tab, trigger navigation to refresh the page
       navigate(newRoute, { replace: true });
     } else {
-      // Navigate to the selected tab as usual
+      // Navigate to the selected tab
       navigate(newRoute);
     }
   };
@@ -90,10 +89,24 @@ export default function VerticalTabs() {
               justifyContent: 'flex-end',  // Align the entire tab content to the right
               alignItems: 'flex-end',  // Align items within the tab to the right
               whiteSpace: 'normal',  // Allow text to wrap
-              wordBreak: 'break-word',  // Break words when necessary
+              wordBreak: 'break-word',  // Break words when necessary 'break-word'
+              overflow: 'hidden',
+
               '.MuiTab-wrapper': {
-                width: '100%',
+                width: '80%',
                 justifyContent: 'flex-end',  // Ensure the wrapper aligns content to the right
+                fontSize: {
+                  xs: '0.5rem',  // Small screens like phones
+                  sm: '0.75rem', // Small to medium screens
+                  md: '0.85rem', // Medium screens
+                  lg: '1rem',    // Large screens
+                },
+                lineHeight: {
+                  xs: '3.0',  // Larger line height for small screens
+                  sm: '1.5',  // Slightly smaller line height for medium screens
+                  md: '1.3',  // Medium line height for larger screens
+                  lg: '1.2',  // Smallest line height for large screens
+                },
               },
             }} 
           />

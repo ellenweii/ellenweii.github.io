@@ -23,7 +23,7 @@ body, .hello-ellen-container {
   flex: 1;
   text-align: left;
   padding: 10px;
-  font-size: 1em;
+  font-size: 1rem;
   display: flex;
   flex-direction: column; /* Stack text and button vertically */
   align-items: flex-start;
@@ -82,8 +82,9 @@ body, .hello-ellen-container {
   }
 
   .text-container .scroll-button {
-    margin-top: 30px;
+    margin-top: 10px;
     align-self: center;
+    font-size: 2rem;
   }
 
   .text-container .note {
@@ -98,7 +99,7 @@ body, .hello-ellen-container {
 }
 
 .text-container p {
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: #555;
   font-weight: 300;
   margin-top: 0;
