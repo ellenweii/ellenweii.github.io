@@ -87,7 +87,6 @@ const projectData = [
       link: 'https://devpost.com/software/bioquest'
     }
   },
-  // Add more projects as needed
   {
     id: 4,
     category: 'finance',
@@ -382,7 +381,7 @@ const projectData = [
   },
   {
     id: 12,
-    category: 'data-science',
+    category: ['data-science'],
     title: 'Data Management Systems Course Projects',
     subtitle: 'Storing, managing, and accessing large-scale data',
     image: require('./cs143_projects.png'),
@@ -436,7 +435,7 @@ const projectData = [
   },
   {
     id: 13,
-    category: 'data-science',
+    category: ['data-science'],
     title: 'Optimizing Computational Efficiency in Function Optimization',
     subtitle: 'A Comparative Study on Sequential Designs for Function Optimization',
     image: require('./STATS143_project.png'),
@@ -469,8 +468,75 @@ const projectData = [
       affiliation: 'STATS 143: Research in Statistics - UCLA',
       link: 'https://github.com/ellenweii/STATS143_FinalProject'
     }
+  },
+  {
+    id: 14,
+    category: ['data-science'],
+    title: 'UCLA Multi-major Enrollment Dashboard',
+    subtitle: 'A Look at Prevalence, Common Combinations, Retention Rate, and Time to Degree',
+    image: require('./STATS141_dashboard.png'),
+    description: [
+      {
+        type: 'paragraph',
+        content: `This project, completed as part of STATS 141XP: Practice of Statistical Consulting, focuses on analyzing the prevalence and impact of students pursuing multiple majors at UCLA. Our interactive dashboard allows users to explore insights related to multiple major combinations, including graduation rates, retention rates, and time to degree.`
+      },
+      {
+        type: 'paragraph',
+        content: `Key questions addressed include: What percentage of students graduate with multiple majors, and how has this changed over time? What are the most common double major pairs? What percentage of students with declared multiple majors actually graduate with multiple degrees? Is the time to degree longer for students with multiple majors compared to single majors?`
+      },
+      {
+        type: 'paragraph',
+        content: `Several datasets were provided with inconsistencies so a major part of the project involved data cleaning and transformation.
+        R was used for this and analytics. R Shiny was used to create the interactive dashboard.
+        Although the dashboard is not available to the public, a static PDF version with sample data and visualizations is provided. I worked specifically on data cleaning and conducting the time to degree analysis using multiple datasets.`
+      },
+      {
+        type: 'paragraph',
+        content: `You can view a static representation of the dashboard in the PDF <a href="/STATS141_report.pdf" target="_blank" rel="noopener noreferrer">here</a> and our project slides <a href="/STATS141_dashboard.pptx" target="_blank" rel="noopener noreferrer">here</a>.`
+      }
+    ],
+    details: {
+      role: 'Data Analyst and Dashboard Developer',
+      role_details: 'Handled data cleaning and performed time to degree analysis using multiple datasets, contributing to the interactive dashboard development',
+      technologies: 'R, Shiny, Tableau, Data Visualization',
+      date: 'June 2024',
+      duration: '3 weeks',
+      affiliation: 'STATS 141XP: Practice of Statistical Consulting - UCLA'
+    }
+  },
+  {
+    id: 15,
+    category: ['data-science'],
+    title: 'Smarter Crime Intervention Report',
+    subtitle: 'Predicting Crime Type Using Victim Sex, Location, and Time',
+    image: require('./STATS140_poster.jpg'),
+    description: [
+      {
+        type: 'paragraph',
+        content: `This project, completed as part of STATS 140XP: Practice of Statistical Consulting, focuses on predicting crime type and severity using data from the Los Angeles Police Department (LAPD). The analysis involved using chi-squared hypothesis testing and a multinomial logistic regression model to explore the relationship between crime type and variables such as geographic area, time of occurrence, and victim sex.`
+      },
+      {
+        type: 'paragraph',
+        content: `Our key research question was: Can we predict the type of crime based on when it occurred, where it occurred, and who the victim was? With a 24% classification accuracy, the model performed significantly better than the baseline. Victim sex was identified as the most important predictor in the model.`
+      },
+      {
+        type: 'paragraph',
+        content: `While our dataset covered crimes from 2020 to the present, future work could involve more granular spatial clustering and temporal analysis to enhance the predictive capabilities, as well as exploring advanced machine learning techniques.`
+      },
+      {
+        type: 'paragraph',
+        content: `You can view the full project report in PDF format <a href="/STATS140_report.pdf" target="_blank" rel="noopener noreferrer">here</a> and view our science-fair-style poster <a href="/STATS140_poster.pdf" target="_blank" rel="noopener noreferrer">here</a>.`
+      }
+    ],
+    details: {
+      role: "Data Analyst",
+      role_details: "Performed hypothesis testing and built a multinomial logistic regression model to predict crime type based on geographic and temporal factors",
+      technologies: "R, Multinomial Logistic Regression, Data Visualization",
+      date: "December 2023",
+      duration: "3 weeks",
+      affiliation: "STATS 140XP: Practice of Statistical Consulting - UCLA"
+    }
   }
-  
   
 ];
 

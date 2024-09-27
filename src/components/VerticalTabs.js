@@ -48,7 +48,22 @@ export default function VerticalTabs() {
   const value = tabRoutes.findIndex(route => currentPath.startsWith(route));
 
   const handleChange = (event, newValue) => {
-    navigate(tabRoutes[newValue]);
+    const newRoute = tabRoutes[newValue];
+
+    // Check if the URL is a project detail page by looking for a project ID at the end
+    const isProjectDetailPage = currentPath.split("/").length === 4 && !isNaN(currentPath.split("/").pop());
+
+    // If on a project detail page and the same tab is clicked, navigate back to the gallery
+    if (isProjectDetailPage && currentPath.startsWith(newRoute)) {
+      // Remove the project ID part from the URL and navigate to the gallery view
+      navigate(newRoute, { replace: true }); // Force navigation back to the gallery
+    } else if (currentPath === newRoute) {
+      // If you're already on the same tab, force re-navigation to refresh the gallery
+      navigate(newRoute, { replace: true });
+    } else {
+      // Navigate to the selected tab as usual
+      navigate(newRoute);
+    }
   };
 
   return (
@@ -69,8 +84,8 @@ export default function VerticalTabs() {
             label={tabName} 
             {...a11yProps(index)} 
             sx={{ 
-                position: 'relative', 
-                top: '8vh',
+              position: 'relative', 
+              top: '8vh',
               textAlign: 'right',  // Align the text to the right
               justifyContent: 'flex-end',  // Align the entire tab content to the right
               alignItems: 'flex-end',  // Align items within the tab to the right

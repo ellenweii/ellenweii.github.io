@@ -23,27 +23,27 @@ function App() {
       
       <main id="main-content" className="main-content">
         <Routes>
-          <Route path="/" element={<Navigate to="/about" />} />
-
-          {/* Layout with VerticalTabs */}
           <Route path="/" element={<VerticalTabs />}>
+            {/* Redirect root to about */}
+            <Route index element={<Navigate to="/about" />} />
+
+            {/* Layout with VerticalTabs */}
             <Route path="about" element={<About />} />
-            <Route path="projects/competitions" element={<ProjectGallery category="competitions" />} />
-            <Route path="projects/data-science" element={<ProjectGallery category="data-science" />} />
-            <Route path="projects/machine-learning-ai" element={<ProjectGallery category="machine-learning-ai" />} />
-            <Route path="projects/finance" element={<ProjectGallery category="finance" />} />
-            <Route path="projects/bioinformatics" element={<ProjectGallery category="bioinformatics" />} />
+            
+            {/* Add key prop (Optional) to force re-render when switching between categories */}
+            <Route path="projects/competitions" element={<ProjectGallery key="competitions" category="competitions" />} />
+            <Route path="projects/data-science" element={<ProjectGallery key="data-science" category="data-science" />} />
+            <Route path="projects/machine-learning-ai" element={<ProjectGallery key="machine-learning-ai" category="machine-learning-ai" />} />
+            <Route path="projects/finance" element={<ProjectGallery key="finance" category="finance" />} />
+            <Route path="projects/bioinformatics" element={<ProjectGallery key="bioinformatics" category="bioinformatics" />} />
+            
             <Route path="lab" element={<Lab />} />
             <Route path="work" element={<Work />} />
             <Route path="resume" element={<Resume />} />
             <Route path="contact" element={<Contact />} />
             
-            {/* Project Detail route nested under relevant tabs */}
-            <Route path="projects/competitions/:id" element={<ProjectDetail />} />
-            <Route path="projects/data-science/:id" element={<ProjectDetail />} />
-            <Route path="projects/machine-learning-ai/:id" element={<ProjectDetail />} />
-            <Route path="projects/finance/:id" element={<ProjectDetail />} />
-            <Route path="projects/bioinformatics/:id" element={<ProjectDetail />} />
+            {/* Project Detail route */}
+            <Route path="projects/:category/:id" element={<ProjectDetail />} />
           </Route>
         </Routes>
       </main>

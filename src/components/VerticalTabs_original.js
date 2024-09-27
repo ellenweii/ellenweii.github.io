@@ -43,7 +43,9 @@ export default function VerticalTabs() {
 
   // Determine the active tab based on the current location
   const currentPath = location.pathname;
-  const value = tabRoutes.findIndex(route => route === currentPath);
+
+  // Find the first matching tabRoute that the current path starts with
+  const value = tabRoutes.findIndex(route => currentPath.startsWith(route));
 
   const handleChange = (event, newValue) => {
     navigate(tabRoutes[newValue]);

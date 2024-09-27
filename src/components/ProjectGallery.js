@@ -14,7 +14,7 @@ const ProjectGallery = ({ category }) => {
   return (
     <div className="project-gallery">
       {filteredProjects.map(project => (
-        <ProjectItem key={project.id} project={project} />
+        <ProjectItem key={project.id} project={project} activeCategory={category} />
       ))}
     </div>
   );
