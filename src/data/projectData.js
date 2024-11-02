@@ -536,7 +536,54 @@ const projectData = [
       duration: "3 weeks",
       affiliation: "STATS 140XP: Practice of Statistical Consulting - UCLA"
     }
+  },
+  {
+    id: 16,
+    category: ['data-science'],
+    title: 'Monte Carlo Methods Course Projects',
+    subtitle: 'Bayesian data analysis, random sampling, and MCMC applications',
+    image: require('./stats102c.png'),
+    description: [
+      {
+        type: 'paragraph',
+        content: `The Monte Carlo Methods course (STATS 102) introduced essential Monte Carlo techniques for Bayesian data analysis and statistical modeling. The curriculum emphasized Bayesian approaches, Monte Carlo integration, importance sampling, and random number generation.`
+      },
+      {
+        type: 'paragraph',
+        content: `<strong>1. Bayesian Data Analysis:</strong> Explored iterative Bayes’ rule applications, Beta-Binomial models, and Bayesian inference for distribution parameters, with practical examples like baseball batting averages.`
+      },
+      {
+        type: 'paragraph',
+        content: `<strong>2. Monte Carlo Integration & Importance Sampling:</strong> Applied Monte Carlo integration and importance sampling methods to enhance sampling efficiency and model accuracy, using proposal distributions for Bayesian analysis.`
+      },
+      {
+        type: 'paragraph',
+        content: `<strong>3. Random Number Generation:</strong> Implemented random number generation techniques, including inverse CDF for exponential and binomial distributions, and rejection sampling for complex distributions like Beta.`
+      },
+      {
+        type: 'paragraph',
+        content: `<strong>4. Markov Chain Monte Carlo (MCMC):</strong> Learned and applied the Metropolis algorithm and Gibbs sampling for generating samples from various distributions, including high-dimensional spaces. Projects included calculating acceptance ratios and verifying distributions using the chi-squared test.`
+      },
+      {
+        type: 'paragraph',
+        content: `<strong>5. Multivariate MCMC:</strong> Developed multivariate MCMC applications for complex scenarios, such as message decryption based on probability mappings and sampling from multivariate normal distributions.`
+      },
+      {
+        type: 'paragraph',
+        content: `This course provided a comprehensive understanding of Monte Carlo methods, covering applications in Bayesian data analysis, MCMC for high-dimensional spaces, and advanced random sampling techniques.`
+      }
+    ],
+    details: {
+      role: null,
+      role_details: 'Applied Bayesian analysis, implemented MCMC techniques, and practiced random sampling methods',
+      technologies: 'R, Python, Bayesian statistics, Monte Carlo methods, MCMC',
+      date: 'Fall 2023',
+      duration: '10 weeks',
+      affiliation: 'STATS 102: Monte Carlo Methods - UCLA',
+      link: null
+    }
   }
+  
   
 ];
 
