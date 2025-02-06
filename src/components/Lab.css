@@ -1,39 +1,39 @@
 .lab-experience {
   text-align: left;
-  max-width: 1200px;  /* Set a reasonable max-width for larger screens */
+  max-width: 1500px;  /* Match Work and Resume layout */
   margin: 0 auto;  /* Center the content horizontally */
-  padding-left: 1rem;  /* Default padding on the left */
-  padding-right: 1rem;  /* Padding on the right */
+  padding-left: 1rem;  /* Default left padding */
+  padding-right: 3rem;  /* Match Work and Resume right padding */
   padding-top: 3rem;  /* Space at the top */
   font-family: Arial, sans-serif;
   color: #333;
-  box-sizing: border-box;  /* Ensure padding is included in the width calculation */
+  box-sizing: border-box;  /* Ensure padding is included in width calculation */
 }
 
-/* Adjust padding for larger screens */
+/* Increase right padding for larger screens */
 @media (min-width: 1200px) {
   .lab-experience {
-    padding-right: 30%;  /* Increase padding on larger screens */
+    padding-right: 30%;
   }
 }
 
 h1 {
   text-align: left;
-  margin-bottom: 1rem;  /* Added space between heading and content */
-  font-size: 2rem;  /* Font size using rem for consistency */
+  margin-bottom: 1rem;
+  font-size: 2rem;
   color: #333;
 }
 
 .lab-container {
   padding-top: 2vh;
   padding-bottom: 2vh;
-  margin-bottom: 2vh;  /* Add space between sections */
+  margin-bottom: 2vh;
   border-bottom: 1px solid #ddd;
-  overflow: hidden;  /* Prevent content from overflowing */
+  overflow: hidden;
 }
 
 h2 {
-  font-size: 1.5rem;  /* Adjusted font size for headings */
+  font-size: 1.5rem;
   margin-bottom: 1vh;
   color: #222;
 }
@@ -41,42 +41,42 @@ h2 {
 p {
   margin-top: 0px;
   margin-bottom: 1.5rem;
-  font-size: 1rem;  /* Use rem for font size */
+  font-size: 1rem;
   line-height: 1.8;
 }
 
 a {
   color: #0056b3;
   text-decoration: none;
-  word-break: break-word;  /* Ensure long links break to fit small screens */
+  word-break: break-word;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-/* Responsive adjustments */
+/* Ensure consistency in spacing and responsiveness */
 @media (max-width: 768px) {
   h1 {
-    font-size: 1.5rem;  /* Reduce heading size on smaller screens */
+    font-size: 1.5rem;
   }
 
   h2 {
-    font-size: 1.25rem;  /* Adjust heading size for smaller screens */
+    font-size: 1.25rem;
   }
 
   p {
-    font-size: 0.9rem;  /* Reduce paragraph size for readability on smaller screens */
+    font-size: 0.9rem;
     margin-bottom: 1rem;
   }
 
   .lab-experience {
     padding-left: 0.5rem;
-    padding-right: 0.5rem;  /* Reduce padding for smaller screens */
-    max-width: 100%;  /* Ensure content fits smaller screens */
+    padding-right: 1rem;  /* Reduce padding for smaller screens */
+    max-width: 100%;
   }
 
   .lab-container {
-    margin-bottom: 2rem;  /* Add more space between sections for clarity */
+    margin-bottom: 2rem;
   }
 }

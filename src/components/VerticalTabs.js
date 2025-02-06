@@ -76,8 +76,10 @@ export default function VerticalTabs() {
       {/* Sidebar Area (Hamburger appears here on mobile) */}
       <Box
         sx={{
-          width: { xs: "20%", md: "25%" }, // Small width for mobile, normal for desktop
+          width: { xs: "15%", md: "25%" }, // Small width for mobile, normal for desktop
           display: "flex",
+          minWidth: { xs: "15%"},
+          maxWidth: { xs: "15%", md: "30%"},
           flexDirection: "column",
           alignItems: "flex-end", // Aligns hamburger and labels to the right
           borderRight: 1,
