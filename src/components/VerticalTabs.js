@@ -1,19 +1,25 @@
-import * as React from 'react';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
-import { useNavigate, useLocation, Link, Outlet } from 'react-router-dom';
+import * as React from "react";
+import { useState } from "react";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Box from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import { useNavigate, useLocation, Link, Outlet } from "react-router-dom";
 
 function a11yProps(index) {
   return {
     id: `vertical-tab-${index}`,
-    'aria-controls': `vertical-tabpanel-${index}`,
+    "aria-controls": `vertical-tabpanel-${index}`,
   };
 }
 
 export default function VerticalTabs() {
   const navigate = useNavigate();
   const location = useLocation();
+  const [isDrawerOpen, setDrawerOpen] = useState(false);
 
   const tabNames = [
     "About",
@@ -25,7 +31,7 @@ export default function VerticalTabs() {
     "Lab",
     "Work",
     "Resume",
-    "Contact"
+    "Contact",
   ];
 
   const tabRoutes = [
@@ -38,79 +44,155 @@ export default function VerticalTabs() {
     "/lab",
     "/work",
     "/resume",
-    "/contact"
+    "/contact",
   ];
 
   const currentPath = location.pathname;
   const isProjectDetailPage = currentPath.match(/\/projects\/[^/]+\/\d+/);
-  const value = tabRoutes.findIndex(route => currentPath.startsWith(route));
+  const value = tabRoutes.findIndex((route) =>
+    currentPath.startsWith(route)
+  );
 
   const handleChange = (event, newValue) => {
     const newRoute = tabRoutes[newValue];
 
     if (isProjectDetailPage && currentPath.startsWith(newRoute)) {
-      navigate(newRoute, { replace: true }); // Navigate back to the gallery view
+      navigate(newRoute, { replace: true });
     } else if (!isProjectDetailPage && currentPath === newRoute) {
       navigate(newRoute, { replace: true });
     } else {
       navigate(newRoute);
     }
+    setDrawerOpen(false); // Close drawer after navigation
   };
 
   return (
     <Box
-      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', minHeight: '100vh' }}
+      sx={{
+        display: "flex",
+        minHeight: "100vh",
+      }}
     >
-      <Tabs
-        orientation="vertical"
-        variant="fullWidth"
-        value={value !== -1 ? value : 0}
-        onChange={handleChange}
-        aria-label="Vertical tabs example"
-        sx={{ borderRight: 1, borderColor: 'divider', minWidth: '25%', maxWidth: '25%' }}
+      {/* Sidebar Area (Hamburger appears here on mobile) */}
+      <Box
+        sx={{
+          width: { xs: "20%", md: "25%" }, // Small width for mobile, normal for desktop
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-end", // Aligns hamburger and labels to the right
+          borderRight: 1,
+          borderColor: "divider",
+          position: "relative",
+        }}
       >
-        {tabNames.map((tabName, index) => (
-          <Tab
-            key={index}
-            label={<Link to={tabRoutes[index]}
-            style={{
-              textDecoration: 'none', // Remove underline
-              color: 'inherit', // Keep the text color the same as the rest of the text
-            }}
-            >
-              {tabName}</Link>} // Use Link for each tab
-            {...a11yProps(index)}
+        {/* Hamburger Menu for Mobile (Appears inside sidebar space) */}
+        <IconButton
+          edge="end"
+          color="inherit"
+          aria-label="menu"
+          sx={{
+            display: { xs: "block", md: "none" }, // Show only on mobile
+            position: "absolute",
+            top: "1rem",
+            right: "0.5rem", // Align to the right where labels used to be
+            zIndex: 1000,
+          }}
+          onClick={() => setDrawerOpen(true)}
+        >
+          <MenuIcon />
+        </IconButton>
+
+        {/* Vertical Tabs for Desktop */}
+        <Tabs
+          orientation="vertical"
+          variant="fullWidth"
+          value={value !== -1 ? value : 0}
+          onChange={handleChange}
+          aria-label="Vertical tabs example"
+          sx={{
+            display: { xs: "none", md: "flex" }, // Hide on mobile
+            textAlign: "right",
+            justifyContent: "flex-end",
+            alignItems: "flex-end",
+          }}
+        >
+          {tabNames.map((tabName, index) => (
+            <Tab
+              key={index}
+              label={
+                <Link
+                  to={tabRoutes[index]}
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  {tabName}
+                </Link>
+              }
+              {...a11yProps(index)}
+              sx={{
+                textAlign: "right",
+                justifyContent: "flex-end",
+                alignItems: "flex-end",
+              }}
+            />
+          ))}
+        </Tabs>
+      </Box>
+
+      {/* Drawer for Mobile */}
+      <Drawer
+        anchor="left"
+        open={isDrawerOpen}
+        onClose={() => setDrawerOpen(false)}
+      >
+        <Box
+          sx={{
+            width: 250,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-end", // Aligns content to the right
+            padding: 2,
+          }}
+        >
+          {/* Close Button */}
+          <IconButton
+            onClick={() => setDrawerOpen(false)}
+            sx={{ alignSelf: "flex-end" }}
+          >
+            <CloseIcon />
+          </IconButton>
+
+          {/* Mobile Menu with Right-Aligned Labels */}
+          <Tabs
+            orientation="vertical"
+            value={value !== -1 ? value : 0}
+            onChange={handleChange}
+            aria-label="Vertical tabs example"
             sx={{
-              position: 'relative',
-              top: '8vh',
-              textAlign: 'right',
-              justifyContent: 'flex-end',
-              alignItems: 'flex-end',
-              whiteSpace: 'normal',
-              wordBreak: 'break-word',
-              overflow: 'hidden',
-              '.MuiTab-wrapper': {
-                width: '80%',
-                justifyContent: 'flex-end',
-                fontSize: {
-                  xs: '0.5rem',
-                  sm: '0.75rem',
-                  md: '0.85rem',
-                  lg: '1rem',
-                },
-                lineHeight: {
-                  xs: '3.0',
-                  sm: '1.5',
-                  md: '1.3',
-                  lg: '1.2',
-                },
+              textAlign: "right", // Align text to the right
+              width: "100%", // Ensure full width usage
+              "& .MuiTab-root": {
+                justifyContent: "flex-end", // Align tab content to the right
+                textAlign: "right",
               },
             }}
-          />
-        ))}
-      </Tabs>
+          >
+            {tabNames.map((tabName, index) => (
+              <Tab
+                key={index}
+                label={tabName}
+                {...a11yProps(index)}
+                sx={{
+                  textAlign: "right",
+                  justifyContent: "flex-end",
+                  alignItems: "flex-end",
+                }}
+              />
+            ))}
+          </Tabs>
+        </Box>
+      </Drawer>
 
-      {/* Render the content for the selected tab */}
+      {/* Render Content */}
       <Box sx={{ flexGrow: 1 }}>
         <Outlet />
       </Box>
