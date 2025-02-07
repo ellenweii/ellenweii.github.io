@@ -39,13 +39,13 @@ p {
 }
 
 #about-me h2 {
-  font-size: 28px; /* Larger font for the section title */
+  font-size: 20px; /* Larger font for the section title */
   margin-bottom: 15px; /* Adds space below the title */
   color: #333; /* Darker text for the title */
 }
 
 #about-me h3 {
-  font-size: 22px; /* Medium font for subsection titles */
+  font-size: 18px; /* Medium font for subsection titles */
   margin-top: 20px; /* Space above subsection titles */
   color: #555; /* Softer dark color for the subsections */
 }
