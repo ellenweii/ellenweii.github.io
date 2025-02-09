@@ -5,11 +5,13 @@ import './ProjectGallery.css';
 
 const ProjectGallery = ({ category }) => {
   // Filter projects based on whether their category array contains the selected category
-  const filteredProjects = projectData.filter(project => 
+  const filteredProjects = projectData
+  .filter(project => 
     Array.isArray(project.category) 
       ? project.category.includes(category)  // Check if category is in the array
       : project.category === category        // Handle single-category items
-  );
+  )
+  .sort((a, b) => b.ORDER - a.ORDER);
 
   return (
     <div className="project-gallery">

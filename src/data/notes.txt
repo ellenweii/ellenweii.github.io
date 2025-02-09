@@ -1,0 +1,17 @@
+order of projects (largest first):
+1 datafest 2023
+2 Course Project: Cryptocurrencies
+3 Monte Carlo Methods Course Projects
+4 Smarter Crime Intervention Report
+5 Time Series Forecasting with Random Forest and GBM
+6 Computer Vision Course Projects
+7 Data Management Systems Course Projects
+8 datafest 2022
+9 Hack with a pro 2024
+10 LA Hacks 2024
+11 UCLA Multi-major Enrollment Dashboard
+12 Time series analysis of US Unemployment Rate
+13 Optimizing Computational Efficiency in Function Optimization
+14 Object Detection Algorithms
+15 Statistical Models in Finance Final Course Project
+16 Paper Review: Stable Neural Stochastic Differential Equations

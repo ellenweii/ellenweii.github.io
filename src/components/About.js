@@ -16,14 +16,14 @@ const About = () => {
       </p>
       
       <p>
-        Looking for full-time data scientist/machine learning scientist/quantitative research roles. Currently based in NYC.
+        Looking for full-time data scientist/machine learning scientist/quantitative research opportunities. Currently based in NYC.
       </p>
       
       <h1>Education</h1>
       <p>
         BS in Statistics & Data Science at UCLA.<br />
         Minor in Bioinformatics.
-        Studying for the CFA.
+        Recently studying for the CFA!
       </p>
 
       <h1>Code</h1>
@@ -40,17 +40,17 @@ const About = () => {
         <h3>
           <FontAwesomeIcon icon={faCanadianMapleLeaf} /> Where I Grew Up
         </h3>
-        <p>I grew up in Toronto and later moved to Vancouver for high school, where I competed in math and science competitions and was part of the IB program.</p>
+        <p>I grew up in Toronto and later moved to beautiful Vancouver for high school, where I competed in math and science competitions and was part of the IB program.</p>
 
         <h3>
           <FontAwesomeIcon icon={faMusic} /> Music
         </h3>
-        <p>I've played violin since childhood, performing in orchestras and small ensembles. I also dabbled in saxophone, cello, and played bass in my school's jazz band.</p>
+        <p>I've loved playing the violin since childhood, performing in orchestras and small ensembles. Also dabbled in saxophone, cello, and played bass in my school's jazz band.</p>
 
         <h3>
           <FontAwesomeIcon icon={faBasketballBall} /> Sports
         </h3>
-        <p>I played basketball and badminton in high school, competing in provincial tournaments for badminton. I still enjoy playing recreationally.</p>
+        <p>After class you could find me playing basketball and badminton. I liked leaving class early in high school to go compete!</p>
       </section>
     </div>
   );

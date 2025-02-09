@@ -1,8 +1,60 @@
 // src/data/projectData.js
 
 const projectData = [
-  {
-    id: 1,
+  {id: 1,
+    ORDER: 10,
+    category: 'competitions',
+    title: 'LA Hacks 2024',
+    subtitle: 'BioQuest - Nature classification app',
+    image: require('./project_bioquest.png'),
+    description: [
+      {
+        type: 'paragraph',
+        content: `BioQuest is a mobile app available for iOS and Android that revolutionizes outdoor exploration. Simply snap a picture of any animal or plant, and our advanced model instantly identifies the species for you. Dive deeper with detailed information about each species and build your own digital journal of encounters. Engage in fun quizzes to test your knowledge and compete with friends, earning points and tracking your progress as you discover and document new species.`
+      },
+      {
+        type: 'paragraph',
+        content: `In an increasingly digital world, it's easy to become glued to our screens, losing touch with the natural world around us. Today’s children, in particular, seem to prefer the glow of screens to the wonders of outdoor play. However, adventure awaits us in every corner of nature – from the familiar creatures we encounter daily to the rare and elusive species that spark our curiosity. We are driven by a desire to bridge the gap between technology and the natural world, rekindling our connection with the environment and igniting a sense of wonder and curiosity within us all. Our aim is simple yet profound: to inspire everyone to step outside, explore, and discover the incredible diversity of life on our planet – all in a way that's engaging, educational, and above all, fun!`
+      },
+      {
+        type: 'paragraph',
+        content: `Our mobile app consists of three interconnected parts. Our backend model harnesses the power of Intel Developer Cloud, Tensorflow, Python, and OpenCV to accurately identify species from user-submitted images. The backend infrastructure is supported by MongoDB and the Gemini API, with Flask handling the server-side logic. The Gemini model enriches user experiences by generating quiz questions, crafting engaging descriptions, and providing additional species information. These change often, keeping users constantly engaged. On the frontend, we utilized React Native for the mobile app development, while Figma served as our design tool, ensuring a seamless and visually appealing user interface.`
+      }
+    ],
+    details: {
+      role: 'Machine Learning/AI Engineer, Product Design',
+      role_details: 'Optimized a TensorFlowLite image classification model and deployed it on Intel Developer Cloud for further performance efficiency',
+      technologies: 'React, Python, Intel Developer Cloud, OpenCV, MongoDB, Gemini API, Flask, Figma, Git',
+      date: 'April 2024',
+      duration: '3 days',
+      affiliation: 'Team Members: Yifan Tang, Warrick He, Arnold He, Ellen Wei',
+      link: 'https://devpost.com/software/bioquest'
+    }
+  },
+  {id: 2,
+    ORDER: 9,
+    category: 'competitions',
+    title: 'Hack With A Pro 2024',
+    subtitle: '3rd Place with OurFridge',
+    image: require('./project_ourfridge.png'),
+    description: [
+      {
+        type: 'paragraph',
+        content: `Our 3rd-place-winning final project is Our Fridge, an easy ingredient sharing website that allows users to share leftover ingredients with their friends through a communal fridge. Our Fridge uses email notifications to let a friend know that a user wants an ingredient, and generates easy recipes that can use the leftover ingredients accumulated by the group.`
+      }
+    ],
+    details: {
+      role: 'Frontend developer, UI/UX',
+      role_details: 'Ideated and designed product, wrote code for the frontend',
+      technologies: 'React, HTML, CSS, Figma, Git',
+      date: 'April 2024',
+      duration: '12 hours',
+      affiliation: 'Team Members: Jacky Dai, Helen Feng, Warrick He, Yifan Tang, Chanh Tran, Ellen Wei',
+      link: 'https://github.com/hailenwashere/hackwapro'
+    }
+  },
+  {id: 3,
+    ORDER: 8,
     category: 'competitions',
     title: 'Datafest 2022',
     subtitle: 'Best Visualization Award Runner-Up',
@@ -35,60 +87,39 @@ const projectData = [
       link: 'https://github.com/ellenweii/datafest2022'
     }
   },
-  {
-    id: 2,
-    category: 'competitions',
-    title: 'Hack With A Pro 2024',
-    subtitle: '3rd Place with OurFridge',
-    image: require('./project_ourfridge.png'),
+  {id: 4,
+    ORDER: 1,
+    category: ['competitions', 'finance'],
+    title: 'Datafest 2023',
+    subtitle: 'Analyzing Pro Bono Legal Services Across the US',
+    image: require('./datafest2023.png'),
     description: [
       {
         type: 'paragraph',
-        content: `Our 3rd-place-winning final project is Our Fridge, an easy ingredient sharing website that allows users to share leftover ingredients with their friends through a communal fridge. Our Fridge uses email notifications to let a friend know that a user wants an ingredient, and generates easy recipes that can use the leftover ingredients accumulated by the group.`
-      }
-    ],
-    details: {
-      role: 'Frontend developer, UI/UX',
-      role_details: 'Ideated and designed product, wrote code for the frontend',
-      technologies: 'React, HTML, CSS, Figma, Git',
-      date: 'April 2024',
-      duration: '12 hours',
-      affiliation: 'Team Members: Jacky Dai, Helen Feng, Warrick He, Yifan Tang, Chanh Tran, Ellen Wei',
-      link: 'https://github.com/hailenwashere/hackwapro'
-    }
-  },
-  {
-    id: 3,
-    category: 'competitions',
-    title: 'LA Hacks 2024',
-    subtitle: 'BioQuest - Nature classification app',
-    image: require('./project_bioquest.png'),
-    description: [
-      {
-        type: 'paragraph',
-        content: `BioQuest is a mobile app available for iOS and Android that revolutionizes outdoor exploration. Simply snap a picture of any animal or plant, and our advanced model instantly identifies the species for you. Dive deeper with detailed information about each species and build your own digital journal of encounters. Engage in fun quizzes to test your knowledge and compete with friends, earning points and tracking your progress as you discover and document new species.`
+        content: `This project was part of the DataFest 2023 challenge, where we worked with real data provided by the American Bar Association (ABA). The challenge involved analyzing pro bono legal services provided through an online platform. The ABA sought insights on trends in legal questions asked by clients and ways to better prepare volunteer attorneys to address evolving needs across different legal categories.`
       },
       {
         type: 'paragraph',
-        content: `In an increasingly digital world, it's easy to become glued to our screens, losing touch with the natural world around us. Today’s children, in particular, seem to prefer the glow of screens to the wonders of outdoor play. However, adventure awaits us in every corner of nature – from the familiar creatures we encounter daily to the rare and elusive species that spark our curiosity. We are driven by a desire to bridge the gap between technology and the natural world, rekindling our connection with the environment and igniting a sense of wonder and curiosity within us all. Our aim is simple yet profound: to inspire everyone to step outside, explore, and discover the incredible diversity of life on our planet – all in a way that's engaging, educational, and above all, fun!`
+        content: `Our analysis included time series analysis of legal questions submitted by month, visualizations such as a USA heat map comparing the number of clients and attorneys, and an exploration of trends in the types of questions asked. We also conducted a Kaplan-Meier survival analysis to examine user engagement over time. These insights helped the ABA understand regional demand for legal aid and anticipate future trends, enabling them to optimize volunteer recruitment and outreach strategies.`
       },
       {
         type: 'paragraph',
-        content: `Our mobile app consists of three interconnected parts. Our backend model harnesses the power of Intel Developer Cloud, Tensorflow, Python, and OpenCV to accurately identify species from user-submitted images. The backend infrastructure is supported by MongoDB and the Gemini API, with Flask handling the server-side logic. The Gemini model enriches user experiences by generating quiz questions, crafting engaging descriptions, and providing additional species information. These change often, keeping users constantly engaged. On the frontend, we utilized React Native for the mobile app development, while Figma served as our design tool, ensuring a seamless and visually appealing user interface.`
+        content: `You can view our presentation slides <a href="/datafest2023_ppt.pdf" target="_blank" rel="noopener noreferrer">here</a>.`
       }
     ],
     details: {
-      role: 'Machine Learning/AI Engineer, Product Design',
-      role_details: 'Optimized a TensorFlowLite image classification model and deployed it on Intel Developer Cloud for further performance efficiency',
-      technologies: 'React, Python, Intel Developer Cloud, OpenCV, MongoDB, Gemini API, Flask, Figma, Git',
-      date: 'April 2024',
+      role: '',
+      role_details: 'Performed time series analysis, geographic visualizations, and survival analysis to assess trends in legal aid',
+      technologies: 'R, Python',
+      date: 'April 2023',
       duration: '3 days',
-      affiliation: 'Team Members: Yifan Tang, Warrick He, Arnold He, Ellen Wei',
-      link: 'https://devpost.com/software/bioquest'
+      affiliation: 'DataFest 2023 - UCLA',
+      link: 'https://github.com/ellenweii/datafest2023'
     }
   },
   {
-    id: 4,
+    id: 5,
+    ORDER: 15,
     category: 'finance',
     title: 'Portfolio Optimization',
     subtitle: 'Statistical Models in Finance Final Course Project',
@@ -162,7 +193,8 @@ const projectData = [
     }
   },
   {
-    id: 5,
+    id: 6,
+    ORDER: 16,
     category: ['finance', 'machine-learning-ai'],
     title: 'Paper Review: Stable Neural Stochastic Differential Equations',
     subtitle: 'Robust Time-Series Analysis with Neural SDEs',
@@ -192,7 +224,8 @@ const projectData = [
     }
   },
   {
-    id: 6,
+    id: 7,
+    ORDER: 12,
     category: ['finance', 'data-science'],
     title: 'Time series analysis of US Unemployment Rate',
     subtitle: 'Housing Supply and Interest Rates on Employment Trends',
@@ -222,7 +255,8 @@ const projectData = [
     }
   },
   {
-    id: 7,
+    id: 8,
+    ORDER: 5,
     category: ['finance', 'data-science'],
     title: 'Time Series Forecasting with Random Forest and GBM',
     subtitle: 'Benchmarking Unemployment Rate Forecasts Using Machine Learning Models',
@@ -252,37 +286,7 @@ const projectData = [
     }
   },
   {
-    id: 8,
-    category: ['competitions', 'finance'],
-    title: 'Datafest 2023',
-    subtitle: 'Analyzing Pro Bono Legal Services Across the US',
-    image: require('./datafest2023.png'),
-    description: [
-      {
-        type: 'paragraph',
-        content: `This project was part of the DataFest 2023 challenge, where we worked with real data provided by the American Bar Association (ABA). The challenge involved analyzing pro bono legal services provided through an online platform. The ABA sought insights on trends in legal questions asked by clients and ways to better prepare volunteer attorneys to address evolving needs across different legal categories.`
-      },
-      {
-        type: 'paragraph',
-        content: `Our analysis included time series analysis of legal questions submitted by month, visualizations such as a USA heat map comparing the number of clients and attorneys, and an exploration of trends in the types of questions asked. We also conducted a Kaplan-Meier survival analysis to examine user engagement over time. These insights helped the ABA understand regional demand for legal aid and anticipate future trends, enabling them to optimize volunteer recruitment and outreach strategies.`
-      },
-      {
-        type: 'paragraph',
-        content: `You can view our presentation slides <a href="/datafest2023_ppt.pdf" target="_blank" rel="noopener noreferrer">here</a>.`
-      }
-    ],
-    details: {
-      role: '',
-      role_details: 'Performed time series analysis, geographic visualizations, and survival analysis to assess trends in legal aid',
-      technologies: 'R, Python',
-      date: 'April 2023',
-      duration: '3 days',
-      affiliation: 'DataFest 2023 - UCLA',
-      link: 'https://github.com/ellenweii/datafest2023'
-    }
-  },
-  {
-    id: 9,
+    id: 2,
     category: ['finance'],
     title: 'Course Project: Cryptocurrencies',
     subtitle: 'Exploring the Financial Architecture and Future of Decentralized Finance',
@@ -313,6 +317,7 @@ const projectData = [
   },
   {
     id: 10,
+    ORDER: 14,
     category: ['data-science', 'machine-learning-ai'],
     title: 'Object Detection Algorithms',
     subtitle: 'Exploring Transfer Learning on Aerial Maritime Images',
@@ -339,6 +344,7 @@ const projectData = [
   },
   {
     id: 11,
+    ORDER: 6,
     category: ['data-science', 'machine-learning-ai'],
     title: 'Computer Vision Course Projects',
     subtitle: 'Exploring Image Classification, Neural Networks, and Advanced Vision Techniques',
@@ -380,7 +386,8 @@ const projectData = [
     }
   },
   {
-    id: 12,
+    id: 12, 
+    ORDER: 7,
     category: ['data-science'],
     title: 'Data Management Systems Course Projects',
     subtitle: 'Storing, managing, and accessing large-scale data',
@@ -435,6 +442,7 @@ const projectData = [
   },
   {
     id: 13,
+    ORDER: 13,
     category: ['data-science'],
     title: 'Optimizing Computational Efficiency in Function Optimization',
     subtitle: 'A Comparative Study on Sequential Designs for Function Optimization',
@@ -471,6 +479,7 @@ const projectData = [
   },
   {
     id: 14,
+    ORDER: 11,
     category: ['data-science'],
     title: 'UCLA Multi-major Enrollment Dashboard',
     subtitle: 'A Look at Prevalence, Common Combinations, Retention Rate, and Time to Degree',
@@ -506,6 +515,7 @@ const projectData = [
   },
   {
     id: 15,
+    ORDER: 4,
     category: ['data-science'],
     title: 'Smarter Crime Intervention Report',
     subtitle: 'Predicting Crime Type Using Victim Sex, Location, and Time',
@@ -539,6 +549,7 @@ const projectData = [
   },
   {
     id: 16,
+    ORDER: 3,
     category: ['data-science'],
     title: 'Monte Carlo Methods Course Projects',
     subtitle: 'Bayesian data analysis, random sampling, and MCMC applications',
@@ -583,8 +594,6 @@ const projectData = [
       link: null
     }
   }
-  
-  
 ];
 
 export default projectData;
